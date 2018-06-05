@@ -33,7 +33,7 @@ To add a publication, add a markdown file in the [publication](publication) dire
 | `licence` | [licence](data/licence) reference | ogl |
 | `data-gov-uk` | [data.gov.uk](https://data.gov.uk) reference | `671bdd94-f9e8-41fd-997c-c371fca050de` |
 | `documentation-url` | Link to documentation | `http://geoportal.statistics.gov.uk/datasets/national-parks-august-2016-full-extent-boundaries-in-great-britain` |
-| `data-url` | http://geoportal1-ons.opendata.arcgis.com/datasets/df607d4ffa124cdca8317e3e63d45d78_1.geojson
+| `data-url` | Link to data | http://geoportal1-ons.opendata.arcgis.com/datasets/df607d4ffa124cdca8317e3e63d45d78_1.geojson
 | `task` | The collection task | geojson |
 | `prefix` | A unique, symbolic name for the scope of identifiers | `national-park-boundary` |
 | `key` | The property name to be taken as the identifier | `npark16cd` |
