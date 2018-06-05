@@ -1,8 +1,8 @@
-# Digital land collector
+# Digital land data collector
 
-Data is collected and transformed into a consistent format in the data/feature and data/entry directories.
+Tools for collecting geographical and other data published by government which may be useful for people building houses.
 
-These files are large, so are published in the following repositories:
+Data is collected and transformed into a consistent format in the data/feature and data/entry directories. These files are large, so are published in the following repositories:
 
   * [digital-land-data](https://github.com/communitiesuk/digital-land-data) 
   * [landregistry-index-data](https://github.com/communitiesuk/landregistry-index-data)
