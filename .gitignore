@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+
+*.swp
+
+local
+cache
+.cache
+.cache.sqlite
+tmp
+data/feature
