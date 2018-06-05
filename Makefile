@@ -8,29 +8,44 @@
 all: makefiles targets
 
 -include makefiles/publications.mk
+-include makefiles/features.mk
 
 TARGETS=\
 	$(FEATURES)\
 	data/organisation.tsv
 
-#makefiles/publications.mk:
+MAKEFILES=\
+	makefiles/publications.mk\
+	makefiles/features.mk
 
-targets:	$(TARGETS)
+
+makefiles/publications.mk:	data/publication/index.tsv
+	@mkdir -p makefiles
+	python3 lib/publications.py < data/publication/index.tsv > $@
+
+makefiles/features.mk:	data/publication/index.tsv $(PUBLICATIONS)
+	@mkdir -p makefiles
+	python3 lib/features.py < data/publication/index.tsv > $@
+
 
 data/organisation.tsv:	etc/development-corporation.tsv etc/national-park.tsv lib/organisation.py
 	@mkdir -p data
 	python3 lib/organisation.py > $@
 
+
 init::
 	pip3 install -r requirements.txt
 
-makefiles: makefiles/publications.mk
+makefiles: $(MAKEFILES)
+
+targets:	$(TARGETS)
 
 clobber::
 	rm -f $(TARGETS)
 
 clean::
-	rm -rf cache
+	rm -f $(MAKEFILES)
 
 prune::	clean
+	rm -rf cache
 	rm -f .cache.sqlite
