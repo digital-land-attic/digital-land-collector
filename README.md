@@ -2,10 +2,10 @@
 
 Configuration and tools to collect geographical data published by government which may be useful for people building houses.
 
-    * [data/publication](publication) — source publications
-    * [data/licence](licence) — licence terms and conditions
-    * [data/copyright](copyright) — copyright, attribution terms and conditions
-    * [etc](etc) — prototype register data
+  * [data/publication](publication) — source publications
+  * [data/licence](licence) — licence terms and conditions
+  * [data/copyright](copyright) — copyright, attribution terms and conditions
+  * [etc](etc) — prototype register data
 
 # Collected data
 
@@ -13,8 +13,8 @@ Data is collected and transformed into a consistent format in the [data/feature]
 
 These files are large, so are published in the following repositories:
 
-    * [digital-land-data](https://github.com/communitiesuk/digital-land-data) 
-    * [landregistry-index-data](https://github.com/communitiesuk/landregistry-index-data)
+  * [digital-land-data](https://github.com/communitiesuk/digital-land-data) 
+  * [landregistry-index-data](https://github.com/communitiesuk/landregistry-index-data)
 
 You can explore the data using the [digital-land-explorer](https://github.com/communitiesuk/digital-land-explorer) application.
 
