@@ -1,8 +1,9 @@
 # Digital land data collector
 
 Configuration and tools to collect geographical data published by government which may be useful for people building houses.
-Data is collected and transformed into a consistent format in the data/feature and data/entry directories.
-These files are large, so are published in the following repositories:
+
+Data is collected and transformed into a consistent format in the data/feature and data/entry directories,
+to be published in the following repositories:
 
   * [digital-land-data](https://github.com/communitiesuk/digital-land-data) 
   * [landregistry-index-data](https://github.com/communitiesuk/landregistry-index-data)
@@ -31,7 +32,7 @@ To add a publication, add a markdown file in the [publication](publication) dire
 | `licence` | [licence](data/licence) reference | `ogl` |
 | `data-gov-uk` | [data.gov.uk](https://data.gov.uk) reference | `671bdd94-f9e8-41fd-997c-c371fca050de` |
 | `documentation-url` | Link to documentation | `http://geoportal.statistics.gov.uk/datasets/national-parks-august-2016-full-extent-boundaries-in-great-britain` |
-| `data-url` | Link to data | http://geoportal1-ons.opendata.arcgis.com/datasets/df607d4ffa124cdca8317e3e63d45d78_1.geojson
+| `data-url` | Link to data | `http://geoportal1-ons.opendata.arcgis.com/datasets/df607d4ffa124cdca8317e3e63d45d78_1.geojson` |
 | `task` | The collection task | `geojson` |
 | `prefix` | A unique, symbolic name for the scope of identifiers | `national-park-boundary` |
 | `key` | The property name to be taken as the identifier | `npark16cd` |
