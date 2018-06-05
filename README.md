@@ -25,7 +25,7 @@ The [etc](etc) directory contains prototype register data where no [GOV.UK regis
 To add a publication, add a markdown file in the [publication](publication) directory with the following front matter fields:
 
 | Field | Value | Example |
-| ----- | ----- | ------- |
+| :---- | :---- | :------ |
 | `publication` | A unique, symbolic name for the publication | `national-park-boundaries` |
 | `name` | A descriptive name for the publication `National Park Boundary` |
 | `organisation` | [organisation](data/organisation.tsv) reference | `government-organisation:D303` |
