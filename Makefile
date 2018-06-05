@@ -5,40 +5,36 @@
 .PHONY: init makefiles clobber clean prune
 .DELETE_ON_ERROR:
 
-all: makefiles targets
-
--include makefiles/publications.mk
--include makefiles/features.mk
-
-TARGETS=\
-	$(FEATURES)\
-	data/organisation.tsv
+all: makefiles publications targets
 
 MAKEFILES=\
-	makefiles/publications.mk\
-	makefiles/features.mk
+	makefiles/publications.mk
 
+-include makefiles/publications.mk
 
-makefiles/publications.mk:	data/publication/index.tsv
+TARGETS=\
+	data/organisation.tsv \
+	$(FEATURES)
+
+ETC=\
+	etc/development-corporation.tsv\
+	etc/national-park.tsv 
+
+makefiles/publications.mk:	data/publication/index.tsv lib/publications.py
 	@mkdir -p makefiles
 	python3 lib/publications.py < data/publication/index.tsv > $@
 
-makefiles/features.mk:	data/publication/index.tsv $(PUBLICATIONS)
-	@mkdir -p makefiles
-	python3 lib/features.py < data/publication/index.tsv > $@
-
-
-data/organisation.tsv:	etc/development-corporation.tsv etc/national-park.tsv lib/organisation.py
+data/organisation.tsv:	etc lib/organisation.py
 	@mkdir -p data
 	python3 lib/organisation.py > $@
 
+makefiles:: $(MAKEFILES)
+publications::	$(PUBLICATIONS)
+targets::	$(TARGETS)
+etc::	$(ETC)
 
 init::
 	pip3 install -r requirements.txt
-
-makefiles: $(MAKEFILES)
-
-targets:	$(TARGETS)
 
 clobber::
 	rm -f $(TARGETS)
