@@ -4,7 +4,7 @@ Configuration and tools to collect geographical data published by government whi
 
 <a href="https://www.flickr.com/photos/psd/42622352081/" title="digital-land"><img src="https://farm2.staticflickr.com/1744/42622352081_70e90a4622_b.jpg" width="1024" height="688" alt="digital-land"></a>
 
-  1. Data is collected from the sources in the [publication](publication) configuration into the `var/cache` directory.
+  1. Data is collected from the sources in the [publication](data/publication) configuration into the `var/cache` directory.
   2. Cached data is transformed into [geojson](http://geojson.org/) containing [WGS84](https://www.gov.uk/government/publications/open-standards-for-government/exchange-of-location-point) coordinates in the `var/geojson` directory.
   3. Features are extracted into a simplified geojson format in the `data/features` directory.
   4. Properties are mapped into a consistent, register-like data model, in the `data/entry` directory.
@@ -27,7 +27,7 @@ The [etc](etc) directory contains prototype register data where no [GOV.UK regis
 
 # Adding a publication
 
-To add a publication, add a markdown file in the [publication](publication) directory with the following front matter fields:
+To add a publication, add a markdown file in the [publication](data/publication) directory with the following front matter fields:
 
 | Field | Value | Example |
 | :---- | :---- | :------ |
