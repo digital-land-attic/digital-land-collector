@@ -53,6 +53,8 @@ We recommend working in [virtual environment](http://docs.python-guide.org/en/la
 
     $ make init
 
+Transforming shapefiles depends upon the [GDAL](http://www.gdal.org/) [ogr2ogr](http://www.gdal.org/ogr2ogr.html) command.
+
 Adding a file changes the dependencies. Ensure the new file path is in the [index.tsv](data/publication/index.tsv) file and rebuild the makefiles:
 
     $ make makefiles
