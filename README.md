@@ -4,8 +4,8 @@ Configuration and tools to collect geographical data published by government whi
 
 <a href="https://www.flickr.com/photos/psd/42622352081/" title="digital-land"><img src="https://farm2.staticflickr.com/1744/42622352081_70e90a4622_b.jpg" width="1024" height="688" alt="digital-land"></a>
 
-  1. Data is collected from sources configured by [publication](publication) directory into the `var/cache` directory.
-  2. Collected shapefiles are transformed into [geojson](http://geojson.org/) containing [WGS84](https://www.gov.uk/government/publications/open-standards-for-government/exchange-of-location-point) coordinates in the `var/geojson` directory.
+  1. Data is collected from the sources listed in the [publication](publication) into the `var/cache` directory.
+  2. Cached data is transformed into [geojson](http://geojson.org/) containing [WGS84](https://www.gov.uk/government/publications/open-standards-for-government/exchange-of-location-point) coordinates in the `var/geojson` directory.
   3. Features are extracted into a simplified geojson format in the `data/features` directory.
   4. Properties are mapped into a consistent, register-like data model, in the `data/entry` directory.
 
