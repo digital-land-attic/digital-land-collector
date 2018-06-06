@@ -44,8 +44,4 @@ if __name__ == "__main__":
 \t@mkdir -p var/cache
 \tcurl --silent --show-error '{data-url}' > $@
 
-{feature}:\t{cache}
-\t@mkdir -p data/feature
-\togr2ogr -f geojson -t_srs EPSG:4326 '$@' '{cache}'
-
 """.format(**item))
