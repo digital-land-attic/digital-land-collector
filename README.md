@@ -2,15 +2,19 @@
 
 Configuration and tools to collect geographical data published by government which may be useful for people building houses.
 
-Data is collected and transformed into a consistent format in the data/feature and data/entry directories,
-to be published in the following repositories:
+<a href="https://www.flickr.com/photos/psd/42622352081/" title="digital-land"><img src="https://farm2.staticflickr.com/1744/42622352081_70e90a4622_b.jpg" width="1024" height="688" alt="digital-land"></a>
+
+  1. Data is collected from sources configured by [publication](publication) directory into the `var/cache` directory.
+  2. Collected shapefiles are transformed into [geojson](http://geojson.org/) containing [WGS84](https://www.gov.uk/government/publications/open-standards-for-government/exchange-of-location-point) coordinates in the `var/geojson` directory.
+  3. Features are extracted into a simplified geojson format in the `data/features` directory.
+  4. Properties are mapped into a consistent, register-like data model, in the `data/entry` directory.
+
+The collected features and properties are periodically published in the following repositories:
 
   * [digital-land-data](https://github.com/communitiesuk/digital-land-data) 
   * [landregistry-index-data](https://github.com/communitiesuk/landregistry-index-data)
 
-You can explore the data using the [digital-land-explorer](https://github.com/communitiesuk/digital-land-explorer) application.
-
-<a href="https://www.flickr.com/photos/psd/42622352081/" title="digital-land"><img src="https://farm2.staticflickr.com/1744/42622352081_70e90a4622_b.jpg" width="1024" height="688" alt="digital-land"></a>
+Which can be explored using the [digital-land-explorer](https://github.com/communitiesuk/digital-land-explorer) application.
 
 # Configuration
 
