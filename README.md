@@ -10,6 +10,8 @@ to be published in the following repositories:
 
 You can explore the data using the [digital-land-explorer](https://github.com/communitiesuk/digital-land-explorer) application.
 
+<a href="https://www.flickr.com/photos/psd/42622352081/" title="digital-land"><img src="https://farm2.staticflickr.com/1744/42622352081_70e90a4622_b.jpg" width="1024" height="688" alt="digital-land"></a>
+
 # Configuration
 
   * [data/publication](data/publication) — source publications
