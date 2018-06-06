@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://inspire.halton.gov.uk/geoserver/wfs?service=WFS&request=GetFeature&typename=inspire:tree_preservation_orders_polygon&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-HAL
+categories: Tree preservation order
 ---
 
 Halton Tree Preservation Orders

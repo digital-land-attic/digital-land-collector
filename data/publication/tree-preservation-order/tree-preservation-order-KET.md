@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://maps.kettering.gov.uk/inspirewfs/wfs.impl?service=wfs&version=2.0.0&request=GetFeature&typename=KBC:Tree_Preservation_Orders&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-KET
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders

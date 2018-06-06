@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://gistch1.copelandbc.org.uk/geoserver/INSPIRE/wfs?service=WFS&version=2.0.0&request=GetFeature&typeName=INSPIRE:TPOs_PlanArea&outputFormat=GML32
 task: gml
 key: 
+prefix: tree-preservation-order-COP
+categories: Tree preservation order
 ---
 
 Local Plan - Tree Preservation Orders

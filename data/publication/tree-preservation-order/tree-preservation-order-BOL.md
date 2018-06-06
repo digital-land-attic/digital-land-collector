@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://maps.bolton.gov.uk/residents/getows.ashx?mapsource=Bolton/inspire&TypeName=tpo&version=1.0.0&request=GetFeature&service=WFS&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-BOL
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders

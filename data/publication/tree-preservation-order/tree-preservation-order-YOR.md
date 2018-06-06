@@ -9,6 +9,8 @@ documentation-url:
 data-url: https://opendata.arcgis.com/datasets/9c05ccf1ec5141d58ec9bca70cef329b_4.geojson
 task: geojson
 key: 
+prefix: tree-preservation-order-YOR
+categories: Tree preservation order
 ---
 
 TPO areas, Groups & Woodlands

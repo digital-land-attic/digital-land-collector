@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://opendatanew-tunbridgewells.opendata.arcgis.com/datasets/b8add41804c44aeda117263c56835ee2_0.geojson
 task: geojson
 key: 
+prefix: tree-preservation-order-TUN
+categories: Tree preservation order
 ---
 
 Tunbridge Wells Open Data - Tree Preservation Orders

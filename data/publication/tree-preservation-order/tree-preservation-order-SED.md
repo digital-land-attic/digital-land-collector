@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://maps.westsuffolk.gov.uk/GetOWS.ashx?VERSION=1.1.0&MAPSOURCE=WestSuffolk/INSPIRE&REQUEST=GetFeature&SERVICE=WFS&typename=tpo&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-SED
+categories: Tree preservation order
 ---
 
 St Edmundsbury Borough Council Tree Preservation Orders

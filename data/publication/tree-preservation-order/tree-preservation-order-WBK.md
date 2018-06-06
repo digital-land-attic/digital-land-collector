@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://gis1.westberks.gov.uk/arcgis/services/maps/Wbc_Inspire_Tree_Preservation_Orders/MapServer/WFSServer?&typename=maps_Wbc_Inspire_Tree_Preservation_Orders:Tree_preservation_orders&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-WBK
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders

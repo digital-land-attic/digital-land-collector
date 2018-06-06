@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://inspirewfs.stalbans.gov.uk/INSPIRE/WEBSERVICE/wfs.exe?service=wfs&request=GetFeature&typename=ns:Tree_Preservation_Orders&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-SAL
+categories: Tree preservation order
 ---
 
 St Albans City and District Council Tree Preservation Orders

@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://gisopendata-sdc.opendata.arcgis.com/datasets/3b347a126ff74237ade93b487e30f659_0.geojson
 task: geojson
 key: 
+prefix: tree-preservation-order-SEV
+categories: Tree preservation order
 ---
 
 Sevenoaks Open Data - Tree Preservation Orders (TPOs)

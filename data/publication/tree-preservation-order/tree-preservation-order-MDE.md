@@ -9,6 +9,8 @@ documentation-url:
 data-url: https://maps.middevon.gov.uk/geoserver/Inspire/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Inspire:TPOpolygons&maxFeatures=50&outputFormat=shape-zip
 task: gml
 key: 
+prefix: tree-preservation-order-MDE
+categories: Tree preservation order
 ---
 
 Mid Devon District Council TPO Polygons - INSPIRE dataset

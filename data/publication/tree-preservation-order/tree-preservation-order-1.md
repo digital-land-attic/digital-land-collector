@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://inspire.misoportal.com/geoserver/peak_district_national_park_pdnpa-tpo-area/wfs?service=wfs&version=2.0.0&request=GetFeature&typename=peak_district_national_park_pdnpa-tpo-area:peak_district_national_park_pdnpa-tpo-area&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-1
+categories: Tree preservation order
 ---
 
 Tree Preservation Order - Collection of Trees

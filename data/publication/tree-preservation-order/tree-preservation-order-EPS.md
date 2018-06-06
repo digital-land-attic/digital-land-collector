@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://myeebc.epsom-ewell.gov.uk/getOWS.ashx?MapSource=EEBC/inspire&service=WFS&version=1.1.0&request=GetFeature&TypeName=TPO&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-EPS
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders

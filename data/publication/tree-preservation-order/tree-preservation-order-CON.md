@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://map.cornwall.gov.uk/arcgis/services/inspire/inspire_environment/MapServer/WFSServer?request=GetFeature&service=WFS&typename=inspire_inspire_environment:tree_preservation_orders_polygons&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-CON
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders (Points)

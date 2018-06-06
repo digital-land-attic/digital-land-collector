@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://maps.carlisle.gov.uk/getows.ashx?mapsource=CCC/inspire&TypeName=tpogroups&version=1.1.0&request=GetFeature&service=WFS&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-CAR
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders - Groups

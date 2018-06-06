@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://maps.scarborough.gov.uk/geoserver/inspire/ows?SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&typename=inspire:TPO_polygon&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-SCE
+categories: Tree preservation order
 ---
 
 Scarborough Borough Council Tree Preservation Order Points

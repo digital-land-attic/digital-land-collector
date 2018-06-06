@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://inspire.nationalparks.gov.uk/geoserver/nymnpa_inspire/ows?service=WFS&request=GetFeature&typename=nymnpa_inspire:nymnpa-tpo_areas&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-4
+categories: Tree preservation order
 ---
 
 NYMNPA Tree Preservation Orders - Individual trees

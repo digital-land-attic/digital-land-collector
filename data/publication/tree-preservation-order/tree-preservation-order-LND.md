@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://www.mapping2.cityoflondon.gov.uk/arcgis/services/INSPIRE/MapServer/WFSServer?&typename=INSPIRE:Tree_Preservation_Orders&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-LND
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders

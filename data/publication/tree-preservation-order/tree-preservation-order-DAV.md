@@ -9,6 +9,8 @@ documentation-url:
 data-url: https://feeds.getmapping.com/54236.wfsx?service=wfs&version=1.0.0&request=getcapabilities&typename=tpo_tree&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-DAV
+categories: Tree preservation order
 ---
 
 Daventry District Council - Tree Preservation Orders Trees

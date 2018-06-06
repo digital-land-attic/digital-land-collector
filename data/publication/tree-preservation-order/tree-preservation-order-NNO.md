@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://maps.norfolk.gov.uk/inspire/data/north_norfolk_district_council/TreePreservationOrders/NNDC_Tree_Preservation_Orders.kml
 task: kml
 key: 
+prefix: tree-preservation-order-NNO
+categories: Tree preservation order
 ---
 
 North Norfolk District Council Tree Preservation Orders

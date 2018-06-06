@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://mapping.milton-keynes.gov.uk/GetOWS.ashx?MAPSOURCE=MiltonKeynes/inspire&version=1.1.0&request=GetFeature&service=WFS&TypeName=tpo_regions&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-MIK
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders - Areas

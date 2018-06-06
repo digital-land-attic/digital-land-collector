@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://inspire.redcar-cleveland.gov.uk/geoserver/RCBC_INSPIRE_WFS/wfs?request=getfeature&version=2.0.0&typeName=RCBC_INSPIRE_WFS:RCBC-TPO&outputformat=GML32
 task: gml
 key: 
+prefix: tree-preservation-order-RCC
+categories: Tree preservation order
 ---
 
 Redcar and Cleveland Borough Council Tree Preservation Orders

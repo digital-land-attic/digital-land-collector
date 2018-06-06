@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://feeds.getmapping.com/665.wfsx?service=wfs&version=1.0.0&request=getcapabilities&typename=TPOS&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-BAS
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders (TPO's)

@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://inspire.wycombe.gov.uk/getows.ashx?Mapsource=Wycombe%2FInspire&service=WFS&version=1.1.0&Request=GetFeature&TypeName=TreePreservationOrder&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-WYO
+categories: Tree preservation order
 ---
 
 Tree Preservation Order

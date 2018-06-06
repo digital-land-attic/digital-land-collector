@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://maps.cheshire.gov.uk/ArcGIS/services/CE/public_wfs/MapServer/WFSServer?request=GetFeature&service=WFS&typename=CE_public_wfs:TPO_layer__live__-_Regions&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-CHE
+categories: Tree preservation order
 ---
 
 CE TPO points

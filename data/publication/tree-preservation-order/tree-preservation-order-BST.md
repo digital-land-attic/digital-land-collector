@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://maps.bristol.gov.uk/arcgis/services/ext/INSPIRE/MapServer/WFSServer?service=WFS&request=GetFeature&typename=INSPIREWFS:Tree_preservation_order_-_trunk&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-BST
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders

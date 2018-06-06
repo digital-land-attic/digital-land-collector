@@ -9,6 +9,8 @@ documentation-url:
 data-url: https://www.lichfielddc.gov.uk/Inspire-data-sets/Lichfield%20District%20Council%20Tree%20Preservation%20Orders%20Single%20Trees/Lichfield%20District%20Council%20Tree%20Preservation%20Orders%20Single%20Trees%20Shapefile.zip
 task: shp
 key: 
+prefix: tree-preservation-order-LIF
+categories: Tree preservation order
 ---
 
 Lichfield District Council Tree Preservation Orders (Single Trees)

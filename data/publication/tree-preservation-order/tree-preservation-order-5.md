@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://inspire.nationalparks.gov.uk/geoserver/ydnpa_inspire/ows?service=WFS&request=GetFeature&typename=ydnpa_inspire:ydnpa_tpo&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-5
+categories: Tree preservation order
 ---
 
 YDNPA Tree Preservation Orders

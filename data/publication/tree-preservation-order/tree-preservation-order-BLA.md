@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://w3.blaby.gov.uk/geoserver/inspire/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=inspire:tree_preservation_orders&maxFeatures=50&outputFormat=application%2Fgml%2Bxml%3B+version%3D3.2
 task: gml
 key: 
+prefix: tree-preservation-order-BLA
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders

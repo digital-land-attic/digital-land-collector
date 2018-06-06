@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://inspire.nationalparks.gov.uk/geoserver/ldnpa_inspire/ows?service=WFS&request=GetFeature&version=2.0.0&typeName=ldnpa_inspire:LDNPA_Tree_Preservation_Orders&outputFormat=shape-zip
 task: gml
 key: 
+prefix: tree-preservation-order-2
+categories: Tree preservation order
 ---
 
 LDNPA Tree Preservation Orders

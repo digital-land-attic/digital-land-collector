@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://inspire.northdevon.gov.uk/geoserver/ows?service=wfs&version=2.0.0&request=GetFeature&typename=Inspire:Tree_Preservation_Orders&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-NDE
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders

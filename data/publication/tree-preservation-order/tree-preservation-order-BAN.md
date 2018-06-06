@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://inspire.misoportal.com/geoserver/basingstoke_deane_borough_council_tpo_area/wfs?service=wfs&version=2.0.0&request=GetFeature&typename=basingstoke_deane_borough_council_tpo_area:basingstoke_deane_borough_council_tpo_area&outputFormat=GML2
 task: gml
 key: 
+prefix: tree-preservation-order-BAN
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders within Basingstoke & Deane Borough Council Area

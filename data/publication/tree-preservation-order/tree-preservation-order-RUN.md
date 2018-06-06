@@ -9,6 +9,8 @@ documentation-url:
 data-url: https://maps.runnymede.gov.uk/geoserver/wfs?service=WFS&request=GetFeature&typeName=planning:tree_preservation_orders&outputFormat=shape-zip
 task: gml
 key: 
+prefix: tree-preservation-order-RUN
+categories: Tree preservation order
 ---
 
 Tree Preservation Orders

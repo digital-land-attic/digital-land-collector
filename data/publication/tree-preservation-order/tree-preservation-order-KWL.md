@@ -9,6 +9,8 @@ documentation-url:
 data-url: http://kgeo.knowsley.gov.uk:8080/geoserver/Inspire/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Inspire:inspire_ufrm_tpo&maxFeatures=50&outputFormat=SHAPE-ZIP
 task: shp
 key: 
+prefix: tree-preservation-order-KWL
+categories: Tree preservation order
 ---
 
 Knowsley Tree Preservation Orders
