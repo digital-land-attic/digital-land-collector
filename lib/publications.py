@@ -24,7 +24,8 @@ if __name__ == "__main__":
             item['cache'] = item.get('cache', os.path.join('var/cache/', item['publication'] + '.' + item['task']))
             item['feature'] = item.get('feature', os.path.join('data/feature', item['publication'] + '.' + 'geojson'))
 
-            items.append(item.metadata)
+            if (item['task'] in ['geojson', 'gml', 'kml']):
+                items.append(item.metadata)
 
     # probably could be a jina or other template
     print("PUBLICATIONS=", end='')
@@ -38,8 +39,7 @@ if __name__ == "__main__":
     print("")
 
     for item in items:
-        if (item['task'] in ['geojson']):
-            print("""
+        print("""
 {cache}:
 \t@mkdir -p var/cache
 \tcurl --silent --show-error '{data-url}' > $@

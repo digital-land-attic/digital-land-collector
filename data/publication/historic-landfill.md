@@ -6,8 +6,8 @@ copyright: environment-agency
 licence: environment-agency-conditional
 data-gov-uk: 17edf94f-6de3-4034-b66b-004ebd0dd010
 documentation-url: https://data.gov.uk/dataset/17edf94f-6de3-4034-b66b-004ebd0dd010/historic-landfill
-data-url: http://environment.data.gov.uk/ds/catalogue/#/7a955570-d465-11e4-a37c-f0def148f590
-task: ea-geostore
+data-url: http://www.geostore.com/OGC/OGCInterface;jsessionid=JJ7Qf4H4jNTPSzkZ3NXRe95s?SESSIONID=-2109512248&INTERFACE=ENVIRONMENTWFS&SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=ms:ea_wfs_historic_landfill
+task: gml
 prefix: historic-landfill-site
 key: hid_ref
 fields: name,licence-holder,

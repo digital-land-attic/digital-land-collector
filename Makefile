@@ -14,7 +14,7 @@ MAKEFILES=\
 
 -include makefiles/publications.mk
 
-makefiles/publications.mk:	data/publication/index.tsv lib/publications.py
+makefiles/publications.mk:	$(PUBLICATIONS) data/publication/index.tsv lib/publications.py
 	@mkdir -p makefiles
 	python3 lib/publications.py < data/publication/index.tsv > $@
 
