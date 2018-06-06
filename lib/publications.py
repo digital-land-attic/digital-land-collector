@@ -20,8 +20,13 @@ if __name__ == "__main__":
 
         if path.endswith('.md'):
             item = frontmatter.load(path)
+
+            item['cache'] = item.get('cache', os.path.join('var/cache/', item['publication'] + '.' + item['task']))
+            item['feature'] = item.get('feature', os.path.join('data/feature', item['publication'] + '.' + 'geojson'))
+
             items.append(item.metadata)
 
+    # probably could be a jina or other template
     print("PUBLICATIONS=", end='')
     for publication in publications:
         print("\\\n   %s" % (path), end='')
@@ -29,18 +34,14 @@ if __name__ == "__main__":
 
     print("FEATURES=", end='')
     for item in items:
-        if 'feature' not in item:
-            item['feature'] = os.path.join('data/feature', item['publication'] + '.geojson')
         print("\\\n   %s" % (item['feature']), end='')
     print("")
 
     for item in items:
         if (item['task'] in ['geojson']):
-            if 'cache' not in item:
-                item['cache'] = os.path.join('cache/', item['publication'] + '.' + item['task'])
             print("""
 {cache}:
-\t@mkdir -p cache
+\t@mkdir -p var/cache
 \tcurl --silent --show-error '{data-url}' > $@
 
 {feature}:\t{cache}

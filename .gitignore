@@ -6,8 +6,6 @@ __pycache__/
 *.swp
 
 local
-cache
-.cache
-.cache.sqlite
+var
 tmp
 data/feature

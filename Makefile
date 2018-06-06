@@ -1,11 +1,10 @@
 .SUFFIXES:
-.SUFFIXES: .zip .gml .geojson
-.PRECIOUS: cache/%.zip data/feature/%.geojson
-.SECONDARY: cache/%.zip data/feature/%.geojson
+.SUFFIXES: .zip .gml .geojson .kml
 .PHONY: init makefiles clobber clean prune
+.SECONDARY:
 .DELETE_ON_ERROR:
 
-all: makefiles publications targets
+all: makefiles etc publications targets
 
 MAKEFILES=\
 	makefiles/publications.mk
@@ -43,5 +42,4 @@ clean::
 	rm -f $(MAKEFILES)
 
 prune::	clean
-	rm -rf cache
-	rm -f .cache.sqlite
+	rm -rf var
