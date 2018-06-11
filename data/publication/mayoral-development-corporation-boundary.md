@@ -7,7 +7,8 @@ licence: ogl
 data-gov-uk: 47bd790a-4270-414a-ba8a-af35edb8f471
 documentation-url: https://data.london.gov.uk/dataset/mayoral-development-corporation-boundary
 data-url: https://files.datapress.com/london/dataset/mayoral-development-corporation-boundary/mdc-boundary-post-consultation-shp.zip
-task: shp.zip
+task: shape-zip
+shape-zip-path: mdc-boundary-post-consultation.shp
 prefix: statistical-geography
 key: npark16cd
 ---

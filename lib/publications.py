@@ -20,11 +20,18 @@ if __name__ == "__main__":
 
         if path.endswith('.md'):
             item = frontmatter.load(path)
+            if (item['task'] in ['geojson', 'gml', 'kml', 'shape-zip']):
 
-            item['cache'] = item.get('cache', os.path.join('var/cache/', item['publication'] + '.' + item['task']))
-            item['feature'] = item.get('feature', os.path.join('data/feature', item['publication'] + '.' + 'geojson'))
+                if item['task'] == 'shape-zip':
+                    suffix = '.zip'
+                else:
+                    suffix = '.' + item['task']
 
-            if (item['task'] in ['geojson', 'gml', 'kml']):
+                item['suffix'] = item.get('suffix', suffix)
+
+                item['cache'] = item.get('cache', os.path.join('var/cache/', item['publication'] + item['suffix']))
+                item['feature'] = item.get('feature', os.path.join('data/feature', item['publication'] + '.geojson'))
+
                 items.append(item.metadata)
 
     # probably could be a jina or other template
@@ -43,5 +50,10 @@ if __name__ == "__main__":
 {cache}:
 \t@mkdir -p var/cache
 \tcurl --silent --show-error '{data-url}' > $@
-
+""".format(**item))
+        if item['task'] == 'shape-zip':
+            print("""
+{feature}:\t{cache}
+\t@mkdir -p data/feature
+\togr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/{cache}/{shape-zip-path}
 """.format(**item))

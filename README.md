@@ -31,7 +31,7 @@ To add a publication, add a markdown file in the [publication](data/publication)
 
 | Field | Value | Example |
 | :---- | :---- | :------ |
-| `publication` | A unique, symbolic name for the publication | `national-park-boundaries` |
+| `publication` | A unique, symbolic name created for each publication | `national-park-boundaries` |
 | `name` | A descriptive name for the publication | `National Park Boundary` |
 | `organisation` | [organisation](data/organisation.tsv) reference | `government-organisation:D303` |
 | `copyright` | [copyright](data/copyright) reference | `ons-boundary` |
@@ -39,7 +39,7 @@ To add a publication, add a markdown file in the [publication](data/publication)
 | `data-gov-uk` | [data.gov.uk](https://data.gov.uk) reference | `671bdd94-f9e8-41fd-997c-c371fca050de` |
 | `documentation-url` | Link to documentation | `http://geoportal.statistics.gov.uk/datasets/national-parks-august-2016-full-extent-boundaries-in-great-britain` |
 | `data-url` | Link to data | `http://geoportal1-ons.opendata.arcgis.com/datasets/df607d4ffa124cdca8317e3e63d45d78_1.geojson` |
-| `task` | The collection task | `geojson` |
+| `task` | The collection [task](data/task) | `geojson` |
 | `prefix` | A unique, symbolic name for the scope of identifiers | `national-park-boundary` |
 | `key` | The property name to be taken as the identifier | `npark16cd` |
 
