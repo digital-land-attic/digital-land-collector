@@ -37,7 +37,7 @@ if __name__ == "__main__":
     # probably could be a jina or other template
     print("PUBLICATIONS=", end='')
     for publication in publications:
-        print("\\\n   %s" % (path), end='')
+        print("\\\n   %s" % (publication), end='')
     print("\n")
 
     print("FEATURES=", end='')
