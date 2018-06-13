@@ -28,10 +28,13 @@ if __name__ == "__main__":
                     suffix = '.' + item['task']
 
                 item['suffix'] = item.get('suffix', suffix)
+                item['prefix'] = item.get('prefix', item['publication'])
+                item['key'] = item.get('key', '')
 
                 publication = item['publication'].replace(':', '-')
 
                 item['cache'] = item.get('cache', os.path.join('var/cache/', publication + item['suffix']))
+                item['geojson'] = item.get('geojson', os.path.join('var/geojson', publication + '.geojson'))
                 item['feature'] = item.get('feature', os.path.join('data/feature', publication + '.geojson'))
 
                 items.append(item.metadata)
@@ -52,10 +55,15 @@ if __name__ == "__main__":
 {cache}:
 \t@mkdir -p var/cache
 \tcurl --silent --show-error '{data-url}' > $@
+
+{feature}:\t{geojson} lib/geojson.py
+\t@mkdir -p data/feature
+\tpython3 lib/geojson.py '{prefix}' '{key}' < {geojson} > $@
 """.format(**item))
+
         if item['task'] == 'shape-zip':
             print("""
-{feature}:\t{cache}
-\t@mkdir -p data/feature
+{geojson}:\t{cache}
+\t@mkdir -p var/geojson
 \togr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/{cache}/{shape-zip-path}
 """.format(**item))

@@ -48,13 +48,6 @@ var/geojson/%.geojson: var/cache/%.kml
 	@mkdir -p var/geojson/
 	ogr2ogr -f geojson -t_srs EPSG:4326 $@ $<
 
-#
-#  extract features from geojson
-#
-data/feature/%.geojson: var/geojson/%.geojson
-	@mkdir -p data/feature/
-	cp $< $@
-
 
 #
 #  phony
