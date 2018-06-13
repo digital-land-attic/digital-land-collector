@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
+
 import json
 import sys
 import os
-import requests
 from decimal import Decimal
 from pyproj import Proj, transform
 
@@ -10,8 +11,9 @@ projection = {
     'wgs84': Proj(init='EPSG:4326')
 }
 
+count = 0
 
-def c14n(geojson, geography, key):
+def c14n(geojson, prefix, key):
 
     def coordinates(c):
 
@@ -35,7 +37,6 @@ def c14n(geojson, geography, key):
             "coordinates": [[[coordinates(c) for c in l] for l in ll] for ll in g['coordinates']]
         }
 
-
     def geometry(g):
         if g['type'] == 'Point':
             return point(g)
@@ -47,9 +48,13 @@ def c14n(geojson, geography, key):
             raise ValueError('invald geometry', g['type'])
 
     def properties(p):
-        return {
-            'area': "%s:%s" % (geography, p[key])
-        }
+        global count
+        if key and key in p:
+            f="%s:%s" % (prefix, p[key])
+        else:
+            f=count
+            count = count + 1
+        return { 'feature': f }
 
     def feature(f):
         if f['type'] != 'Feature':
@@ -74,7 +79,7 @@ def c14n(geojson, geography, key):
 
 
 def dump(geojson, output):
-    json.dump(geojson, output, default=decimal_default, separators=(',', ':'))
+    json.dump(geojson, output, default=decimal_default, separators=(',', ':'), sort_keys=True)
 
 
 def load(i):
@@ -87,7 +92,6 @@ def decimal_default(obj):
 
 
 if __name__ == "__main__":
-    r = requests.get(sys.argv[1])
-    geojson = r.json()
-    geojson = c14n(geojson, sys.argv[2], sys.argv[3])
+    geojson = load(sys.stdin)
+    geojson = c14n(geojson, prefix=sys.argv[1], key=sys.argv[2])
     dump(geojson, sys.stdout)
