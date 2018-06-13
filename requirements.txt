@@ -4,7 +4,6 @@ docutils==0.14
 idna==2.6
 lockfile==0.12.2
 luigi==2.7.5
-pkg-resources==0.0.0
 python-daemon==2.1.2
 python-frontmatter==0.4.2
 pyproj==1.9.5.1
