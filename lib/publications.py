@@ -52,7 +52,7 @@ if __name__ == "__main__":
         print("""
 {cache}:
 \t@mkdir -p var/cache
-\tcurl --silent --show-error '{data-url}' > $@
+\tcurl --silent --show-error --location '{data-url}' > $@
 
 {feature}:\t{geojson} lib/geojson.py
 \t@mkdir -p data/feature
