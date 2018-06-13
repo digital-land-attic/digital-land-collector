@@ -65,3 +65,9 @@ if __name__ == "__main__":
 \t@mkdir -p var/geojson
 \togr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/{cache}/{shape-zip-path}
 """.format(**item))
+        elif 'srs' in item:
+            print("""
+{geojson}:\t{cache}
+\t@mkdir -p var/geojson
+\togr2ogr -f geojson -s_srs {srs} -t_srs EPSG:4326 $@ {cache}
+""".format(**item))
