@@ -27,7 +27,7 @@ TARGETS=\
 
 ETC=\
 	etc/development-corporation.tsv\
-	etc/national-park.tsv 
+	etc/national-park.tsv
 
 data/organisation.tsv:	$(ETC) lib/organisation.py
 	@mkdir -p data
@@ -42,7 +42,7 @@ var/geojson/%.geojson: var/cache/%.geojson
 
 var/geojson/%.geojson: var/cache/%.gml
 	@mkdir -p var/geojson/
-	ogr2ogr -f geojson -t_srs EPSG:4326 $@ $<
+	ogr2ogr -f geojson -s_srs EPSG:27700 -t_srs EPSG:4326 $@ $<
 
 var/geojson/%.geojson: var/cache/%.kml
 	@mkdir -p var/geojson/
