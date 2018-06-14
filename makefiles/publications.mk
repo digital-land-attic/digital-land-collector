@@ -28,8 +28,10 @@ PUBLICATIONS=\
    data/publication/tree-preservation-order/tree-preservation-order-FOR.md\
    data/publication/tree-preservation-order/tree-preservation-order-HAA.md\
    data/publication/tree-preservation-order/tree-preservation-order-HAL.md\
+   data/publication/tree-preservation-order/tree-preservation-order-KET.md\
    data/publication/tree-preservation-order/tree-preservation-order-KWL.md\
    data/publication/tree-preservation-order/tree-preservation-order-LIF.md\
+   data/publication/tree-preservation-order/tree-preservation-order-LND.md\
    data/publication/tree-preservation-order/tree-preservation-order-MDE.md\
    data/publication/tree-preservation-order/tree-preservation-order-MIK.md\
    data/publication/tree-preservation-order/tree-preservation-order-MSS.md\
@@ -40,7 +42,6 @@ PUBLICATIONS=\
    data/publication/tree-preservation-order/tree-preservation-order-RIB.md\
    data/publication/tree-preservation-order/tree-preservation-order-ROH.md\
    data/publication/tree-preservation-order/tree-preservation-order-RUN.md\
-   data/publication/tree-preservation-order/tree-preservation-order-SAL.md\
    data/publication/tree-preservation-order/tree-preservation-order-SCA.md\
    data/publication/tree-preservation-order/tree-preservation-order-SCE.md\
    data/publication/tree-preservation-order/tree-preservation-order-SED.md\
@@ -84,6 +85,8 @@ FEATURES=\
    data/feature/tree-preservation-order-FOR.geojson\
    data/feature/tree-preservation-order-HAA.geojson\
    data/feature/tree-preservation-order-HAL.geojson\
+   data/feature/tree-preservation-order-KET.geojson\
+   data/feature/tree-preservation-order-LND.geojson\
    data/feature/tree-preservation-order-MDE.geojson\
    data/feature/tree-preservation-order-MIK.geojson\
    data/feature/tree-preservation-order-MSS.geojson\
@@ -93,7 +96,6 @@ FEATURES=\
    data/feature/tree-preservation-order-RCC.geojson\
    data/feature/tree-preservation-order-RIB.geojson\
    data/feature/tree-preservation-order-RUN.geojson\
-   data/feature/tree-preservation-order-SAL.geojson\
    data/feature/tree-preservation-order-SCA.geojson\
    data/feature/tree-preservation-order-SCE.geojson\
    data/feature/tree-preservation-order-SED.geojson\
@@ -393,6 +395,24 @@ data/feature/tree-preservation-order-HAL.geojson:	var/geojson/tree-preservation-
 	python3 lib/geojson.py 'tree-preservation-order:HAL' 'None' < var/geojson/tree-preservation-order-HAL.geojson > $@
 
 
+var/cache/tree-preservation-order-KET.gml:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'http://maps.kettering.gov.uk/inspirewfs/wfs.impl?service=wfs&version=2.0.0&request=GetFeature&typenames=KBC:Tree_Preservation_Orders&outputFormat=GML2' > $@
+
+data/feature/tree-preservation-order-KET.geojson:	var/geojson/tree-preservation-order-KET.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'tree-preservation-order:KET' 'None' < var/geojson/tree-preservation-order-KET.geojson > $@
+
+
+var/cache/tree-preservation-order-LND.gml:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'http://www.mapping2.cityoflondon.gov.uk/arcgis/services/INSPIRE/MapServer/WFSServer?Request=GetFeature&typename=INSPIRE:Tree_Preservation_Orders&outputFormat=GML2' > $@
+
+data/feature/tree-preservation-order-LND.geojson:	var/geojson/tree-preservation-order-LND.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'tree-preservation-order:LND' 'None' < var/geojson/tree-preservation-order-LND.geojson > $@
+
+
 var/cache/tree-preservation-order-MDE.zip:
 	@mkdir -p var/cache
 	curl --silent --show-error --location 'https://maps.middevon.gov.uk/geoserver/Inspire/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Inspire:TPOpolygons&maxFeatures=50&outputFormat=shape-zip' > $@
@@ -484,15 +504,6 @@ var/geojson/tree-preservation-order-RUN.geojson:	var/cache/tree-preservation-ord
 	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/tree-preservation-order-RUN.zip/tree_preservation_orders.shp
 
 
-var/cache/tree-preservation-order-SAL.gml:
-	@mkdir -p var/cache
-	curl --silent --show-error --location 'http://inspirewfs.stalbans.gov.uk/INSPIRE/WEBSERVICE/wfs.exe?service=wfs&request=GetFeature&typename=ns:Tree_Preservation_Orders&outputFormat=GML2' > $@
-
-data/feature/tree-preservation-order-SAL.geojson:	var/geojson/tree-preservation-order-SAL.geojson lib/geojson.py
-	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:SAL' 'None' < var/geojson/tree-preservation-order-SAL.geojson > $@
-
-
 var/cache/tree-preservation-order-SCA.gml:
 	@mkdir -p var/cache
 	curl --silent --show-error --location 'http://inspire.misoportal.com/geoserver/south_cambridgshire_tree_preservation_orders_polygon/wfs?service=wfs&version=2.0.0&request=GetFeature&typename=south_cambridgshire_tree_preservation_orders_polygon:south_cambridgshire_tree_preservation_orders_polygon&outputFormat=GML2' > $@
@@ -567,7 +578,7 @@ data/feature/tree-preservation-order-TUN.geojson:	var/geojson/tree-preservation-
 
 var/cache/tree-preservation-order-WBK.gml:
 	@mkdir -p var/cache
-	curl --silent --show-error --location 'http://gis1.westberks.gov.uk/arcgis/services/maps/Wbc_Inspire_Tree_Preservation_Orders/MapServer/WFSServer?&typename=maps_Wbc_Inspire_Tree_Preservation_Orders:Tree_preservation_orders&outputFormat=GML2' > $@
+	curl --silent --show-error --location 'http://gis1.westberks.gov.uk/arcgis/services/maps/Wbc_Inspire_Tree_Preservation_Orders/MapServer/WFSServer?Request=GetFeature&typename=maps_Wbc_Inspire_Tree_Preservation_Orders:Tree_preservation_orders&outputFormat=GML2' > $@
 
 data/feature/tree-preservation-order-WBK.geojson:	var/geojson/tree-preservation-order-WBK.geojson lib/geojson.py
 	@mkdir -p data/feature
