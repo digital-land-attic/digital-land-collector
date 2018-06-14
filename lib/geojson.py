@@ -57,6 +57,9 @@ def c14n(geojson, prefix, key):
         return { 'feature': f }
 
     def feature(f):
+
+        print(f)
+
         if f['type'] != 'Feature':
             raise ValueError('invald feature', f['type'])
 
@@ -67,12 +70,12 @@ def c14n(geojson, prefix, key):
         }
 
     def collection(c):
+
         if c['type'] != 'FeatureCollection':
             raise ValueError('invalid geojson')
-
         return {
             "type": "FeatureCollection",
-            "features": [feature(f) for f in geojson['features']]
+            "features": [feature(f) for f in c['features'] if f.get('geometry') is not None]
         }
 
     return collection(geojson)
