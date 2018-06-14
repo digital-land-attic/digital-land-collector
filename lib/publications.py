@@ -31,9 +31,11 @@ if __name__ == "__main__":
                 item['prefix'] = item.get('prefix', item['publication'])
                 item['key'] = item.get('key', '')
 
-                item['cache'] = item.get('cache', os.path.join('var/cache/', item['publication'] + item['suffix']))
-                item['geojson'] = item.get('geojson', os.path.join('var/geojson', item['publication'] + '.geojson'))
-                item['feature'] = item.get('feature', os.path.join('data/feature', item['publication'] + '.geojson'))
+                publication = item['publication'].replace(':', '-')
+
+                item['cache'] = item.get('cache', os.path.join('var/cache/', publication + item['suffix']))
+                item['geojson'] = item.get('geojson', os.path.join('var/geojson', publication + '.geojson'))
+                item['feature'] = item.get('feature', os.path.join('data/feature', publication + '.geojson'))
 
                 items.append(item.metadata)
 
