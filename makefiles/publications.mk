@@ -55,7 +55,8 @@ PUBLICATIONS=\
    data/publication/tree-preservation-order/tree-preservation-order-WBK.md\
    data/publication/tree-preservation-order/tree-preservation-order-WGN.md\
    data/publication/tree-preservation-order/tree-preservation-order-WYO.md\
-   data/publication/tree-preservation-order/tree-preservation-order-YOR.md
+   data/publication/tree-preservation-order/tree-preservation-order-YOR.md\
+   data/publication/listed-buildings/listed-buildings-GRY.md
 
 FEATURES=\
    data/feature/green-belt.geojson\
@@ -88,6 +89,7 @@ FEATURES=\
    data/feature/tree-preservation-order-FOR.geojson\
    data/feature/tree-preservation-order-HAA.geojson\
    data/feature/tree-preservation-order-HAL.geojson\
+   data/feature/tree-preservation-order-HCK.geojson\
    data/feature/tree-preservation-order-KET.geojson\
    data/feature/tree-preservation-order-LND.geojson\
    data/feature/tree-preservation-order-MDE.geojson\
@@ -110,7 +112,8 @@ FEATURES=\
    data/feature/tree-preservation-order-WBK.geojson\
    data/feature/tree-preservation-order-WGN.geojson\
    data/feature/tree-preservation-order-WYO.geojson\
-   data/feature/tree-preservation-order-YOR.geojson
+   data/feature/tree-preservation-order-YOR.geojson\
+   data/feature/listed-buildings-GRY.geojson
 
 var/cache/green-belt.zip:
 	@mkdir -p var/cache
@@ -407,6 +410,15 @@ data/feature/tree-preservation-order-HAL.geojson:	var/geojson/tree-preservation-
 	python3 lib/geojson.py 'tree-preservation-order:HAL' 'None' < var/geojson/tree-preservation-order-HAL.geojson > $@
 
 
+var/cache/tree-preservation-order-HCK.kml:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://map.hackney.gov.uk/geoserver/wms/kml?mode=download&layers=lbhdesign:Tree%20Preservation%20Orders%20Points' > $@
+
+data/feature/tree-preservation-order-HCK.geojson:	var/geojson/tree-preservation-order-HCK.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'tree-preservation-order:HCK' 'None' < var/geojson/tree-preservation-order-HCK.geojson > $@
+
+
 var/cache/tree-preservation-order-KET.gml:
 	@mkdir -p var/cache
 	curl --silent --show-error --location 'http://maps.kettering.gov.uk/inspirewfs/wfs.impl?service=wfs&version=2.0.0&request=GetFeature&typenames=KBC:Tree_Preservation_Orders&outputFormat=GML2' > $@
@@ -622,4 +634,13 @@ var/cache/tree-preservation-order-YOR.geojson:
 data/feature/tree-preservation-order-YOR.geojson:	var/geojson/tree-preservation-order-YOR.geojson lib/geojson.py
 	@mkdir -p data/feature
 	python3 lib/geojson.py 'tree-preservation-order:YOR' 'None' < var/geojson/tree-preservation-order-YOR.geojson > $@
+
+
+var/cache/listed-buildings-GRY.kml:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'http://maps.norfolk.gov.uk/inspire/data/great_yarmouth_borough_council/listedbuildings/Great%20Yarmouth%20Borough%20Council%20Listed%20Buildings.kml' > $@
+
+data/feature/listed-buildings-GRY.geojson:	var/geojson/listed-buildings-GRY.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'listed-building' 'None' < var/geojson/listed-buildings-GRY.geojson > $@
 
