@@ -27,7 +27,7 @@ TARGETS=\
 
 ETC=\
 	etc/development-corporation.tsv\
-	etc/national-park.tsv 
+	etc/national-park.tsv
 
 data/organisation.tsv:	$(ETC) lib/organisation.py
 	@mkdir -p data
