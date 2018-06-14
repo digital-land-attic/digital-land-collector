@@ -4,7 +4,8 @@ PUBLICATIONS=\
    data/publication/lambeth-wards.md\
    data/publication/local-authority-districts.md\
    data/publication/mayoral-development-corporation-boundary.md\
-   data/publication/national-park-boundary.md
+   data/publication/national-park-boundary.md\
+   data/publication/uk-ward-boundary.md
 
 FEATURES=\
    data/feature/green-belt.geojson\
@@ -12,7 +13,8 @@ FEATURES=\
    data/feature/lambeth-wards.geojson\
    data/feature/local-authority-districts.geojson\
    data/feature/mayoral-development-corporation-boundary.geojson\
-   data/feature/national-park-boundary.geojson
+   data/feature/national-park-boundary.geojson\
+   data/feature/uk-ward-boundary.geojson
 
 var/cache/green-belt.zip:
 	@mkdir -p var/cache
@@ -76,4 +78,13 @@ var/cache/national-park-boundary.geojson:
 data/feature/national-park-boundary.geojson:	var/geojson/national-park-boundary.geojson lib/geojson.py
 	@mkdir -p data/feature
 	python3 lib/geojson.py 'national-park-boundary' 'npark16cd' < var/geojson/national-park-boundary.geojson > $@
+
+
+var/cache/uk-ward-boundary.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/afcc88affe5f450e9c03970b237a7999_1.geojson' > $@
+
+data/feature/uk-ward-boundary.geojson:	var/geojson/uk-ward-boundary.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'ward-boundary' 'wd16cd' < var/geojson/uk-ward-boundary.geojson > $@
 
