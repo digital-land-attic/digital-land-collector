@@ -16,6 +16,7 @@ import json
 import sys
 import os
 from decimal import Decimal
+import hashlib
 
 
 def decimal_default(obj):
@@ -61,12 +62,14 @@ def geometry(g):
 
 
 
-def feature(f, publication, prefix, key):
+def feature(f, item, publication, prefix, key):
     if f['type'] != 'Feature':
         raise ValueError('invald feature', f['type'])
 
     p = f['properties']
     properties = {}
+
+    properties['item'] = item
 
     if publication:
         properties['publication'] = publication
@@ -81,8 +84,8 @@ def feature(f, publication, prefix, key):
     }
 
 
-def dump(obj, file):
-    json.dump(obj, file, default=decimal_default, separators=(',', ':'), sort_keys=True)
+def dumps(obj):
+    return json.dumps(obj, default=decimal_default, separators=(',', ':'), sort_keys=True)
 
 
 def c14n(publication, prefix, key, ifp=sys.stdin, ofp=sys.stdout):
@@ -91,8 +94,8 @@ def c14n(publication, prefix, key, ifp=sys.stdin, ofp=sys.stdout):
     features = ijson.items(ifp, 'features.item')
     for f in features:
         if 'geometry' in f and f['geometry']:
-            dump(feature(f, publication, prefix, key), file=ofp)
-            print(file=ofp)
+            item = hashlib.md5(dumps(f).encode('utf-8')).hexdigest()
+            print(dumps(feature(f, item, publication, prefix, key)), file=ofp)
 
     print(']}', file=ofp)
 
