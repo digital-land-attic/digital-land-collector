@@ -60,21 +60,23 @@ def geometry(g):
         raise ValueError('invald geometry', g['type'])
 
 
-def properties(p, prefix, key):
-    if key and key in p:
-        f="%s:%s" % (prefix, p[key])
-        return { 'feature': f }
-    else:
-        return {}
 
-
-def feature(f, prefix, key):
+def feature(f, publication, prefix, key):
     if f['type'] != 'Feature':
         raise ValueError('invald feature', f['type'])
 
+    p = f['properties']
+    properties = {}
+
+    if publication:
+        properties['publication'] = publication
+
+    if key and key in p:
+        properties['feature'] = "%s:%s" % (prefix, p[key])
+
     return {
         "type": "Feature",
-        "properties": properties(f['properties'], prefix, key),
+        "properties": properties,
         "geometry": geometry(f['geometry'])
     }
 
@@ -83,17 +85,17 @@ def dump(obj, file):
     json.dump(obj, file, default=decimal_default, separators=(',', ':'), sort_keys=True)
 
 
-def c14n(prefix, key, ifp=sys.stdin, ofp=sys.stdout):
+def c14n(publication, prefix, key, ifp=sys.stdin, ofp=sys.stdout):
     print('{ "type": "FeatureCollection", "features": [', file=ofp)
 
     features = ijson.items(ifp, 'features.item')
     for f in features:
         if 'geometry' in f and f['geometry']:
-            dump(feature(f, prefix, key), file=ofp)
+            dump(feature(f, publication, prefix, key), file=ofp)
             print(file=ofp)
 
     print(']}', file=ofp)
 
 
 if __name__ == "__main__":
-    c14n(prefix=sys.argv[1], key=sys.argv[2])
+    c14n(publication=sys.argv[1], prefix=sys.argv[2], key=sys.argv[3])

@@ -121,7 +121,7 @@ var/cache/green-belt.zip:
 
 data/feature/green-belt.geojson:	var/geojson/green-belt.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'green-belt' '' < var/geojson/green-belt.geojson > $@
+	python3 lib/geojson.py 'green-belt' 'green-belt' '' < var/geojson/green-belt.geojson > $@
 
 
 var/geojson/green-belt.geojson:	var/cache/green-belt.zip
@@ -135,7 +135,7 @@ var/cache/historic-landfill.gml:
 
 data/feature/historic-landfill.geojson:	var/geojson/historic-landfill.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'historic-landfill-site' 'hid_ref' < var/geojson/historic-landfill.geojson > $@
+	python3 lib/geojson.py 'historic-landfill' 'historic-landfill-site' 'hid_ref' < var/geojson/historic-landfill.geojson > $@
 
 
 var/cache/lambeth-wards.geojson:
@@ -144,7 +144,7 @@ var/cache/lambeth-wards.geojson:
 
 data/feature/lambeth-wards.geojson:	var/geojson/lambeth-wards.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'lambeth-wards' 'ONS_WARD_CODE' < var/geojson/lambeth-wards.geojson > $@
+	python3 lib/geojson.py 'lambeth-wards' 'lambeth-wards' 'ONS_WARD_CODE' < var/geojson/lambeth-wards.geojson > $@
 
 
 var/cache/local-authority-districts.geojson:
@@ -153,7 +153,7 @@ var/cache/local-authority-districts.geojson:
 
 data/feature/local-authority-districts.geojson:	var/geojson/local-authority-districts.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'local-authority-boundary' 'lad17cd' < var/geojson/local-authority-districts.geojson > $@
+	python3 lib/geojson.py 'local-authority-districts' 'local-authority-boundary' 'lad17cd' < var/geojson/local-authority-districts.geojson > $@
 
 
 var/cache/mayoral-development-corporation-boundary.zip:
@@ -162,7 +162,7 @@ var/cache/mayoral-development-corporation-boundary.zip:
 
 data/feature/mayoral-development-corporation-boundary.geojson:	var/geojson/mayoral-development-corporation-boundary.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'statistical-geography' 'npark16cd' < var/geojson/mayoral-development-corporation-boundary.geojson > $@
+	python3 lib/geojson.py 'mayoral-development-corporation-boundary' 'statistical-geography' 'npark16cd' < var/geojson/mayoral-development-corporation-boundary.geojson > $@
 
 
 var/geojson/mayoral-development-corporation-boundary.geojson:	var/cache/mayoral-development-corporation-boundary.zip
@@ -176,7 +176,7 @@ var/cache/national-park-boundary.geojson:
 
 data/feature/national-park-boundary.geojson:	var/geojson/national-park-boundary.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'national-park-boundary' 'npark16cd' < var/geojson/national-park-boundary.geojson > $@
+	python3 lib/geojson.py 'national-park-boundary' 'national-park-boundary' 'npark16cd' < var/geojson/national-park-boundary.geojson > $@
 
 
 var/cache/uk-ward-boundary.geojson:
@@ -185,7 +185,7 @@ var/cache/uk-ward-boundary.geojson:
 
 data/feature/uk-ward-boundary.geojson:	var/geojson/uk-ward-boundary.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'ward-boundary' 'wd16cd' < var/geojson/uk-ward-boundary.geojson > $@
+	python3 lib/geojson.py 'uk-ward-boundary' 'ward-boundary' 'wd16cd' < var/geojson/uk-ward-boundary.geojson > $@
 
 
 var/cache/tree-preservation-order-1.gml:
@@ -194,7 +194,7 @@ var/cache/tree-preservation-order-1.gml:
 
 data/feature/tree-preservation-order-1.geojson:	var/geojson/tree-preservation-order-1.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:1' 'None' < var/geojson/tree-preservation-order-1.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:1' 'tree-preservation-order:1' 'None' < var/geojson/tree-preservation-order-1.geojson > $@
 
 
 var/geojson/tree-preservation-order-1.geojson:	var/cache/tree-preservation-order-1.gml
@@ -208,7 +208,7 @@ var/cache/tree-preservation-order-2.zip:
 
 data/feature/tree-preservation-order-2.geojson:	var/geojson/tree-preservation-order-2.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:2' 'None' < var/geojson/tree-preservation-order-2.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:2' 'tree-preservation-order:2' 'None' < var/geojson/tree-preservation-order-2.geojson > $@
 
 
 var/geojson/tree-preservation-order-2.geojson:	var/cache/tree-preservation-order-2.zip
@@ -222,7 +222,7 @@ var/cache/tree-preservation-order-4.gml:
 
 data/feature/tree-preservation-order-4.geojson:	var/geojson/tree-preservation-order-4.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:4' 'None' < var/geojson/tree-preservation-order-4.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:4' 'tree-preservation-order:4' 'None' < var/geojson/tree-preservation-order-4.geojson > $@
 
 
 var/cache/tree-preservation-order-5.gml:
@@ -231,7 +231,7 @@ var/cache/tree-preservation-order-5.gml:
 
 data/feature/tree-preservation-order-5.geojson:	var/geojson/tree-preservation-order-5.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:5' 'None' < var/geojson/tree-preservation-order-5.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:5' 'tree-preservation-order:5' 'None' < var/geojson/tree-preservation-order-5.geojson > $@
 
 
 var/cache/tree-preservation-order-7.gml:
@@ -240,7 +240,7 @@ var/cache/tree-preservation-order-7.gml:
 
 data/feature/tree-preservation-order-7.geojson:	var/geojson/tree-preservation-order-7.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:7' 'None' < var/geojson/tree-preservation-order-7.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:7' 'tree-preservation-order:7' 'None' < var/geojson/tree-preservation-order-7.geojson > $@
 
 
 var/cache/tree-preservation-order-BAN.gml:
@@ -249,7 +249,7 @@ var/cache/tree-preservation-order-BAN.gml:
 
 data/feature/tree-preservation-order-BAN.geojson:	var/geojson/tree-preservation-order-BAN.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:BAN' 'None' < var/geojson/tree-preservation-order-BAN.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:BAN' 'tree-preservation-order:BAN' 'None' < var/geojson/tree-preservation-order-BAN.geojson > $@
 
 
 var/cache/tree-preservation-order-BAR.gml:
@@ -258,7 +258,7 @@ var/cache/tree-preservation-order-BAR.gml:
 
 data/feature/tree-preservation-order-BAR.geojson:	var/geojson/tree-preservation-order-BAR.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:BAR' 'None' < var/geojson/tree-preservation-order-BAR.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:BAR' 'tree-preservation-order:BAR' 'None' < var/geojson/tree-preservation-order-BAR.geojson > $@
 
 
 var/cache/tree-preservation-order-BAS.gml:
@@ -267,7 +267,7 @@ var/cache/tree-preservation-order-BAS.gml:
 
 data/feature/tree-preservation-order-BAS.geojson:	var/geojson/tree-preservation-order-BAS.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:BAS' 'None' < var/geojson/tree-preservation-order-BAS.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:BAS' 'tree-preservation-order:BAS' 'None' < var/geojson/tree-preservation-order-BAS.geojson > $@
 
 
 var/cache/tree-preservation-order-BLA.gml:
@@ -276,7 +276,7 @@ var/cache/tree-preservation-order-BLA.gml:
 
 data/feature/tree-preservation-order-BLA.geojson:	var/geojson/tree-preservation-order-BLA.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:BLA' 'None' < var/geojson/tree-preservation-order-BLA.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:BLA' 'tree-preservation-order:BLA' 'None' < var/geojson/tree-preservation-order-BLA.geojson > $@
 
 
 var/cache/tree-preservation-order-BOL.gml:
@@ -285,7 +285,7 @@ var/cache/tree-preservation-order-BOL.gml:
 
 data/feature/tree-preservation-order-BOL.geojson:	var/geojson/tree-preservation-order-BOL.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:BOL' 'None' < var/geojson/tree-preservation-order-BOL.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:BOL' 'tree-preservation-order:BOL' 'None' < var/geojson/tree-preservation-order-BOL.geojson > $@
 
 
 var/cache/tree-preservation-order-BPL.gml:
@@ -294,7 +294,7 @@ var/cache/tree-preservation-order-BPL.gml:
 
 data/feature/tree-preservation-order-BPL.geojson:	var/geojson/tree-preservation-order-BPL.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:BPL' 'None' < var/geojson/tree-preservation-order-BPL.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:BPL' 'tree-preservation-order:BPL' 'None' < var/geojson/tree-preservation-order-BPL.geojson > $@
 
 
 var/geojson/tree-preservation-order-BPL.geojson:	var/cache/tree-preservation-order-BPL.gml
@@ -308,7 +308,7 @@ var/cache/tree-preservation-order-BST.gml:
 
 data/feature/tree-preservation-order-BST.geojson:	var/geojson/tree-preservation-order-BST.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:BST' 'None' < var/geojson/tree-preservation-order-BST.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:BST' 'tree-preservation-order:BST' 'None' < var/geojson/tree-preservation-order-BST.geojson > $@
 
 
 var/cache/tree-preservation-order-CAR.gml:
@@ -317,7 +317,7 @@ var/cache/tree-preservation-order-CAR.gml:
 
 data/feature/tree-preservation-order-CAR.geojson:	var/geojson/tree-preservation-order-CAR.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:CAR' 'None' < var/geojson/tree-preservation-order-CAR.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:CAR' 'tree-preservation-order:CAR' 'None' < var/geojson/tree-preservation-order-CAR.geojson > $@
 
 
 var/cache/tree-preservation-order-CHC.gml:
@@ -326,7 +326,7 @@ var/cache/tree-preservation-order-CHC.gml:
 
 data/feature/tree-preservation-order-CHC.geojson:	var/geojson/tree-preservation-order-CHC.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:CHC' 'None' < var/geojson/tree-preservation-order-CHC.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:CHC' 'tree-preservation-order:CHC' 'None' < var/geojson/tree-preservation-order-CHC.geojson > $@
 
 
 var/cache/tree-preservation-order-CHE.gml:
@@ -335,7 +335,7 @@ var/cache/tree-preservation-order-CHE.gml:
 
 data/feature/tree-preservation-order-CHE.geojson:	var/geojson/tree-preservation-order-CHE.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:CHE' 'None' < var/geojson/tree-preservation-order-CHE.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:CHE' 'tree-preservation-order:CHE' 'None' < var/geojson/tree-preservation-order-CHE.geojson > $@
 
 
 var/cache/tree-preservation-order-CON.gml:
@@ -344,7 +344,7 @@ var/cache/tree-preservation-order-CON.gml:
 
 data/feature/tree-preservation-order-CON.geojson:	var/geojson/tree-preservation-order-CON.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:CON' 'None' < var/geojson/tree-preservation-order-CON.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:CON' 'tree-preservation-order:CON' 'None' < var/geojson/tree-preservation-order-CON.geojson > $@
 
 
 var/cache/tree-preservation-order-COP.gml:
@@ -353,7 +353,7 @@ var/cache/tree-preservation-order-COP.gml:
 
 data/feature/tree-preservation-order-COP.geojson:	var/geojson/tree-preservation-order-COP.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:COP' 'None' < var/geojson/tree-preservation-order-COP.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:COP' 'tree-preservation-order:COP' 'None' < var/geojson/tree-preservation-order-COP.geojson > $@
 
 
 var/cache/tree-preservation-order-DAV.gml:
@@ -362,7 +362,7 @@ var/cache/tree-preservation-order-DAV.gml:
 
 data/feature/tree-preservation-order-DAV.geojson:	var/geojson/tree-preservation-order-DAV.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:DAV' 'None' < var/geojson/tree-preservation-order-DAV.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:DAV' 'tree-preservation-order:DAV' 'None' < var/geojson/tree-preservation-order-DAV.geojson > $@
 
 
 var/cache/tree-preservation-order-EDO.gml:
@@ -371,7 +371,7 @@ var/cache/tree-preservation-order-EDO.gml:
 
 data/feature/tree-preservation-order-EDO.geojson:	var/geojson/tree-preservation-order-EDO.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:EDO' 'None' < var/geojson/tree-preservation-order-EDO.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:EDO' 'tree-preservation-order:EDO' 'None' < var/geojson/tree-preservation-order-EDO.geojson > $@
 
 
 var/cache/tree-preservation-order-EPS.gml:
@@ -380,7 +380,7 @@ var/cache/tree-preservation-order-EPS.gml:
 
 data/feature/tree-preservation-order-EPS.geojson:	var/geojson/tree-preservation-order-EPS.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:EPS' 'None' < var/geojson/tree-preservation-order-EPS.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:EPS' 'tree-preservation-order:EPS' 'None' < var/geojson/tree-preservation-order-EPS.geojson > $@
 
 
 var/cache/tree-preservation-order-FOR.gml:
@@ -389,7 +389,7 @@ var/cache/tree-preservation-order-FOR.gml:
 
 data/feature/tree-preservation-order-FOR.geojson:	var/geojson/tree-preservation-order-FOR.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:FOR' 'None' < var/geojson/tree-preservation-order-FOR.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:FOR' 'tree-preservation-order:FOR' 'None' < var/geojson/tree-preservation-order-FOR.geojson > $@
 
 
 var/cache/tree-preservation-order-HAA.gml:
@@ -398,7 +398,7 @@ var/cache/tree-preservation-order-HAA.gml:
 
 data/feature/tree-preservation-order-HAA.geojson:	var/geojson/tree-preservation-order-HAA.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:HAA' 'None' < var/geojson/tree-preservation-order-HAA.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:HAA' 'tree-preservation-order:HAA' 'None' < var/geojson/tree-preservation-order-HAA.geojson > $@
 
 
 var/cache/tree-preservation-order-HAL.gml:
@@ -407,7 +407,7 @@ var/cache/tree-preservation-order-HAL.gml:
 
 data/feature/tree-preservation-order-HAL.geojson:	var/geojson/tree-preservation-order-HAL.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:HAL' 'None' < var/geojson/tree-preservation-order-HAL.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:HAL' 'tree-preservation-order:HAL' 'None' < var/geojson/tree-preservation-order-HAL.geojson > $@
 
 
 var/cache/tree-preservation-order-HCK.kml:
@@ -416,7 +416,7 @@ var/cache/tree-preservation-order-HCK.kml:
 
 data/feature/tree-preservation-order-HCK.geojson:	var/geojson/tree-preservation-order-HCK.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:HCK' 'None' < var/geojson/tree-preservation-order-HCK.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:HCK' 'tree-preservation-order:HCK' 'None' < var/geojson/tree-preservation-order-HCK.geojson > $@
 
 
 var/cache/tree-preservation-order-KET.gml:
@@ -425,7 +425,7 @@ var/cache/tree-preservation-order-KET.gml:
 
 data/feature/tree-preservation-order-KET.geojson:	var/geojson/tree-preservation-order-KET.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:KET' 'None' < var/geojson/tree-preservation-order-KET.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:KET' 'tree-preservation-order:KET' 'None' < var/geojson/tree-preservation-order-KET.geojson > $@
 
 
 var/cache/tree-preservation-order-LND.gml:
@@ -434,7 +434,7 @@ var/cache/tree-preservation-order-LND.gml:
 
 data/feature/tree-preservation-order-LND.geojson:	var/geojson/tree-preservation-order-LND.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:LND' 'None' < var/geojson/tree-preservation-order-LND.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:LND' 'tree-preservation-order:LND' 'None' < var/geojson/tree-preservation-order-LND.geojson > $@
 
 
 var/cache/tree-preservation-order-MDE.zip:
@@ -443,7 +443,7 @@ var/cache/tree-preservation-order-MDE.zip:
 
 data/feature/tree-preservation-order-MDE.geojson:	var/geojson/tree-preservation-order-MDE.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:MDE' 'None' < var/geojson/tree-preservation-order-MDE.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:MDE' 'tree-preservation-order:MDE' 'None' < var/geojson/tree-preservation-order-MDE.geojson > $@
 
 
 var/geojson/tree-preservation-order-MDE.geojson:	var/cache/tree-preservation-order-MDE.zip
@@ -457,7 +457,7 @@ var/cache/tree-preservation-order-MIK.gml:
 
 data/feature/tree-preservation-order-MIK.geojson:	var/geojson/tree-preservation-order-MIK.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:MIK' 'None' < var/geojson/tree-preservation-order-MIK.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:MIK' 'tree-preservation-order:MIK' 'None' < var/geojson/tree-preservation-order-MIK.geojson > $@
 
 
 var/cache/tree-preservation-order-MSS.gml:
@@ -466,7 +466,7 @@ var/cache/tree-preservation-order-MSS.gml:
 
 data/feature/tree-preservation-order-MSS.geojson:	var/geojson/tree-preservation-order-MSS.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:MSS' 'None' < var/geojson/tree-preservation-order-MSS.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:MSS' 'tree-preservation-order:MSS' 'None' < var/geojson/tree-preservation-order-MSS.geojson > $@
 
 
 var/cache/tree-preservation-order-NDE.gml:
@@ -475,7 +475,7 @@ var/cache/tree-preservation-order-NDE.gml:
 
 data/feature/tree-preservation-order-NDE.geojson:	var/geojson/tree-preservation-order-NDE.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:NDE' 'None' < var/geojson/tree-preservation-order-NDE.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:NDE' 'tree-preservation-order:NDE' 'None' < var/geojson/tree-preservation-order-NDE.geojson > $@
 
 
 var/cache/tree-preservation-order-NNO.kml:
@@ -484,7 +484,7 @@ var/cache/tree-preservation-order-NNO.kml:
 
 data/feature/tree-preservation-order-NNO.geojson:	var/geojson/tree-preservation-order-NNO.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:NNO' 'None' < var/geojson/tree-preservation-order-NNO.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:NNO' 'tree-preservation-order:NNO' 'None' < var/geojson/tree-preservation-order-NNO.geojson > $@
 
 
 var/cache/tree-preservation-order-OLD.gml:
@@ -493,7 +493,7 @@ var/cache/tree-preservation-order-OLD.gml:
 
 data/feature/tree-preservation-order-OLD.geojson:	var/geojson/tree-preservation-order-OLD.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:OLD' 'None' < var/geojson/tree-preservation-order-OLD.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:OLD' 'tree-preservation-order:OLD' 'None' < var/geojson/tree-preservation-order-OLD.geojson > $@
 
 
 var/cache/tree-preservation-order-RCC.gml:
@@ -502,7 +502,7 @@ var/cache/tree-preservation-order-RCC.gml:
 
 data/feature/tree-preservation-order-RCC.geojson:	var/geojson/tree-preservation-order-RCC.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:RCC' 'None' < var/geojson/tree-preservation-order-RCC.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:RCC' 'tree-preservation-order:RCC' 'None' < var/geojson/tree-preservation-order-RCC.geojson > $@
 
 
 var/cache/tree-preservation-order-RIB.gml:
@@ -511,7 +511,7 @@ var/cache/tree-preservation-order-RIB.gml:
 
 data/feature/tree-preservation-order-RIB.geojson:	var/geojson/tree-preservation-order-RIB.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:RIB' 'None' < var/geojson/tree-preservation-order-RIB.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:RIB' 'tree-preservation-order:RIB' 'None' < var/geojson/tree-preservation-order-RIB.geojson > $@
 
 
 var/cache/tree-preservation-order-RUN.zip:
@@ -520,7 +520,7 @@ var/cache/tree-preservation-order-RUN.zip:
 
 data/feature/tree-preservation-order-RUN.geojson:	var/geojson/tree-preservation-order-RUN.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:RUN' 'None' < var/geojson/tree-preservation-order-RUN.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:RUN' 'tree-preservation-order:RUN' 'None' < var/geojson/tree-preservation-order-RUN.geojson > $@
 
 
 var/geojson/tree-preservation-order-RUN.geojson:	var/cache/tree-preservation-order-RUN.zip
@@ -534,7 +534,7 @@ var/cache/tree-preservation-order-SCA.gml:
 
 data/feature/tree-preservation-order-SCA.geojson:	var/geojson/tree-preservation-order-SCA.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:SCA' 'None' < var/geojson/tree-preservation-order-SCA.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:SCA' 'tree-preservation-order:SCA' 'None' < var/geojson/tree-preservation-order-SCA.geojson > $@
 
 
 var/cache/tree-preservation-order-SCE.gml:
@@ -543,7 +543,7 @@ var/cache/tree-preservation-order-SCE.gml:
 
 data/feature/tree-preservation-order-SCE.geojson:	var/geojson/tree-preservation-order-SCE.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:SCE' 'None' < var/geojson/tree-preservation-order-SCE.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:SCE' 'tree-preservation-order:SCE' 'None' < var/geojson/tree-preservation-order-SCE.geojson > $@
 
 
 var/cache/tree-preservation-order-SED.gml:
@@ -552,7 +552,7 @@ var/cache/tree-preservation-order-SED.gml:
 
 data/feature/tree-preservation-order-SED.geojson:	var/geojson/tree-preservation-order-SED.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:SED' 'None' < var/geojson/tree-preservation-order-SED.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:SED' 'tree-preservation-order:SED' 'None' < var/geojson/tree-preservation-order-SED.geojson > $@
 
 
 var/cache/tree-preservation-order-SEV.geojson:
@@ -561,7 +561,7 @@ var/cache/tree-preservation-order-SEV.geojson:
 
 data/feature/tree-preservation-order-SEV.geojson:	var/geojson/tree-preservation-order-SEV.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:SEV' 'None' < var/geojson/tree-preservation-order-SEV.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:SEV' 'tree-preservation-order:SEV' 'None' < var/geojson/tree-preservation-order-SEV.geojson > $@
 
 
 var/cache/tree-preservation-order-SLF.gml:
@@ -570,7 +570,7 @@ var/cache/tree-preservation-order-SLF.gml:
 
 data/feature/tree-preservation-order-SLF.geojson:	var/geojson/tree-preservation-order-SLF.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:SLF' 'None' < var/geojson/tree-preservation-order-SLF.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:SLF' 'tree-preservation-order:SLF' 'None' < var/geojson/tree-preservation-order-SLF.geojson > $@
 
 
 var/cache/tree-preservation-order-SWD.gml:
@@ -579,7 +579,7 @@ var/cache/tree-preservation-order-SWD.gml:
 
 data/feature/tree-preservation-order-SWD.geojson:	var/geojson/tree-preservation-order-SWD.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:SWD' 'None' < var/geojson/tree-preservation-order-SWD.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:SWD' 'tree-preservation-order:SWD' 'None' < var/geojson/tree-preservation-order-SWD.geojson > $@
 
 
 var/cache/tree-preservation-order-TFW.gml:
@@ -588,7 +588,7 @@ var/cache/tree-preservation-order-TFW.gml:
 
 data/feature/tree-preservation-order-TFW.geojson:	var/geojson/tree-preservation-order-TFW.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:TFW' 'None' < var/geojson/tree-preservation-order-TFW.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:TFW' 'tree-preservation-order:TFW' 'None' < var/geojson/tree-preservation-order-TFW.geojson > $@
 
 
 var/cache/tree-preservation-order-TUN.geojson:
@@ -597,7 +597,7 @@ var/cache/tree-preservation-order-TUN.geojson:
 
 data/feature/tree-preservation-order-TUN.geojson:	var/geojson/tree-preservation-order-TUN.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:TUN' 'None' < var/geojson/tree-preservation-order-TUN.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:TUN' 'tree-preservation-order:TUN' 'None' < var/geojson/tree-preservation-order-TUN.geojson > $@
 
 
 var/cache/tree-preservation-order-WBK.gml:
@@ -606,7 +606,7 @@ var/cache/tree-preservation-order-WBK.gml:
 
 data/feature/tree-preservation-order-WBK.geojson:	var/geojson/tree-preservation-order-WBK.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:WBK' 'None' < var/geojson/tree-preservation-order-WBK.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:WBK' 'tree-preservation-order:WBK' 'None' < var/geojson/tree-preservation-order-WBK.geojson > $@
 
 
 var/cache/tree-preservation-order-WGN.geojson:
@@ -615,7 +615,7 @@ var/cache/tree-preservation-order-WGN.geojson:
 
 data/feature/tree-preservation-order-WGN.geojson:	var/geojson/tree-preservation-order-WGN.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:WGN' 'None' < var/geojson/tree-preservation-order-WGN.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:WGN' 'tree-preservation-order:WGN' 'None' < var/geojson/tree-preservation-order-WGN.geojson > $@
 
 
 var/cache/tree-preservation-order-WYO.gml:
@@ -624,7 +624,7 @@ var/cache/tree-preservation-order-WYO.gml:
 
 data/feature/tree-preservation-order-WYO.geojson:	var/geojson/tree-preservation-order-WYO.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:WYO' 'None' < var/geojson/tree-preservation-order-WYO.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:WYO' 'tree-preservation-order:WYO' 'None' < var/geojson/tree-preservation-order-WYO.geojson > $@
 
 
 var/cache/tree-preservation-order-YOR.geojson:
@@ -633,7 +633,7 @@ var/cache/tree-preservation-order-YOR.geojson:
 
 data/feature/tree-preservation-order-YOR.geojson:	var/geojson/tree-preservation-order-YOR.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:YOR' 'None' < var/geojson/tree-preservation-order-YOR.geojson > $@
+	python3 lib/geojson.py 'tree-preservation-order:YOR' 'tree-preservation-order:YOR' 'None' < var/geojson/tree-preservation-order-YOR.geojson > $@
 
 
 var/cache/listed-buildings-GRY.kml:
@@ -642,5 +642,5 @@ var/cache/listed-buildings-GRY.kml:
 
 data/feature/listed-buildings-GRY.geojson:	var/geojson/listed-buildings-GRY.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'listed-building' 'None' < var/geojson/listed-buildings-GRY.geojson > $@
+	python3 lib/geojson.py 'listed-buildings:GRY' 'listed-building' 'None' < var/geojson/listed-buildings-GRY.geojson > $@
 
