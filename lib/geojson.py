@@ -90,6 +90,7 @@ def dumps(obj):
 
 def c14n(publication, prefix, key, ifp=sys.stdin, ofp=sys.stdout):
     print('{ "type": "FeatureCollection", "features": [', file=ofp, end="")
+
     features = ijson.items(ifp, 'features.item')
     try:
         while True:
@@ -99,9 +100,12 @@ def c14n(publication, prefix, key, ifp=sys.stdin, ofp=sys.stdout):
                 print(dumps(feature(f, item, publication, prefix, key)), file=ofp, end="")
                 print(',', end="")
     except StopIteration:
-        if 'geometry' in f and f['geometry']:
-            item = hashlib.md5(dumps(f).encode('utf-8')).hexdigest()
-            print(dumps(feature(f, item, publication, prefix, key)), file=ofp, end="")
+        try:
+            if 'geometry' in f and f['geometry']:
+                item = hashlib.md5(dumps(f).encode('utf-8')).hexdigest()
+                print(dumps(feature(f, item, publication, prefix, key)), file=ofp, end="")
+        except UnboundLocalError:
+            pass
 
     print(']}', file=ofp, end="")
 
