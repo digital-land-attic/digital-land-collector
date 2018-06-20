@@ -13,6 +13,7 @@ if __name__ == "__main__":
 
     r.load_local('national-park')
     r.load_local('development-corporation')
+    r.load_local('company')
 
     gss = Records()
     for register in [
