@@ -225,6 +225,11 @@ data/feature/tree-preservation-order-4.geojson:	var/geojson/tree-preservation-or
 	python3 lib/geojson.py 'tree-preservation-order:4' 'tree-preservation-order:4' 'None' < var/geojson/tree-preservation-order-4.geojson > $@
 
 
+var/geojson/tree-preservation-order-4.geojson:	var/cache/tree-preservation-order-4.gml
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -s_srs EPSG:27700 -t_srs EPSG:4326 $@ var/cache/tree-preservation-order-4.gml
+
+
 var/cache/tree-preservation-order-5.gml:
 	@mkdir -p var/cache
 	curl --silent --show-error --location 'http://inspire.nationalparks.gov.uk/geoserver/ydnpa_inspire/ows?service=WFS&request=GetFeature&typename=ydnpa_inspire:ydnpa_tpo&outputFormat=GML2' > $@
@@ -277,6 +282,11 @@ var/cache/tree-preservation-order-BLA.gml:
 data/feature/tree-preservation-order-BLA.geojson:	var/geojson/tree-preservation-order-BLA.geojson lib/geojson.py
 	@mkdir -p data/feature
 	python3 lib/geojson.py 'tree-preservation-order:BLA' 'tree-preservation-order:BLA' 'None' < var/geojson/tree-preservation-order-BLA.geojson > $@
+
+
+var/geojson/tree-preservation-order-BLA.geojson:	var/cache/tree-preservation-order-BLA.gml
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -s_srs EPSG:27700 -t_srs EPSG:4326 $@ var/cache/tree-preservation-order-BLA.gml
 
 
 var/cache/tree-preservation-order-BOL.gml:

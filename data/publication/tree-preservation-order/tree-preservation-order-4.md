@@ -10,6 +10,7 @@ data-url: http://inspire.nationalparks.gov.uk/geoserver/nymnpa_inspire/ows?servi
 task: gml
 key: 
 categories: Tree preservation order
+srs: EPSG:27700
 ---
 
 NYMNPA Tree Preservation Orders - Individual trees
