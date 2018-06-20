@@ -13,7 +13,6 @@ PUBLICATIONS=\
    data/publication/tree-preservation-order/tree-preservation-order-7.md\
    data/publication/tree-preservation-order/tree-preservation-order-BAN.md\
    data/publication/tree-preservation-order/tree-preservation-order-BAR.md\
-   data/publication/tree-preservation-order/tree-preservation-order-BAS.md\
    data/publication/tree-preservation-order/tree-preservation-order-BLA.md\
    data/publication/tree-preservation-order/tree-preservation-order-BOL.md\
    data/publication/tree-preservation-order/tree-preservation-order-BPL.md\
@@ -73,7 +72,6 @@ FEATURES=\
    data/feature/tree-preservation-order-7.geojson\
    data/feature/tree-preservation-order-BAN.geojson\
    data/feature/tree-preservation-order-BAR.geojson\
-   data/feature/tree-preservation-order-BAS.geojson\
    data/feature/tree-preservation-order-BLA.geojson\
    data/feature/tree-preservation-order-BOL.geojson\
    data/feature/tree-preservation-order-BPL.geojson\
@@ -264,15 +262,6 @@ var/cache/tree-preservation-order-BAR.gml:
 data/feature/tree-preservation-order-BAR.geojson:	var/geojson/tree-preservation-order-BAR.geojson lib/geojson.py
 	@mkdir -p data/feature
 	python3 lib/geojson.py 'tree-preservation-order:BAR' 'tree-preservation-order:BAR' 'None' < var/geojson/tree-preservation-order-BAR.geojson > $@
-
-
-var/cache/tree-preservation-order-BAS.gml:
-	@mkdir -p var/cache
-	curl --silent --show-error --location 'http://feeds.getmapping.com/665.wfsx?service=wfs&version=1.0.0&request=getcapabilities&typename=TPOS&outputFormat=GML2' > $@
-
-data/feature/tree-preservation-order-BAS.geojson:	var/geojson/tree-preservation-order-BAS.geojson lib/geojson.py
-	@mkdir -p data/feature
-	python3 lib/geojson.py 'tree-preservation-order:BAS' 'tree-preservation-order:BAS' 'None' < var/geojson/tree-preservation-order-BAS.geojson > $@
 
 
 var/cache/tree-preservation-order-BLA.gml:
