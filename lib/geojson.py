@@ -89,15 +89,21 @@ def dumps(obj):
 
 
 def c14n(publication, prefix, key, ifp=sys.stdin, ofp=sys.stdout):
-    print('{ "type": "FeatureCollection", "features": [', file=ofp)
-
+    print('{ "type": "FeatureCollection", "features": [', file=ofp, end="")
     features = ijson.items(ifp, 'features.item')
-    for f in features:
+    try:
+        while True:
+            f = next(features)
+            if 'geometry' in f and f['geometry']:
+                item = hashlib.md5(dumps(f).encode('utf-8')).hexdigest()
+                print(dumps(feature(f, item, publication, prefix, key)), file=ofp, end="")
+                print(',', end="")
+    except StopIteration:
         if 'geometry' in f and f['geometry']:
             item = hashlib.md5(dumps(f).encode('utf-8')).hexdigest()
-            print(dumps(feature(f, item, publication, prefix, key)), file=ofp)
+            print(dumps(feature(f, item, publication, prefix, key)), file=ofp, end="")
 
-    print(']}', file=ofp)
+    print(']}', file=ofp, end="")
 
 
 if __name__ == "__main__":
