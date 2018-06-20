@@ -27,6 +27,7 @@ TARGETS=\
 
 ETC=\
 	etc/development-corporation.tsv\
+	etc/company.tsv\
 	etc/national-park.tsv
 
 data/organisation.tsv:	$(ETC) lib/organisation.py
