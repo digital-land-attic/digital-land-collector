@@ -27,7 +27,7 @@ if __name__ == "__main__":
     for row in gss.rows():
         organisation = 'local-authority-eng:' + row['local-authority-eng']
         if organisation in r.records:
-            r.records[organisation]['area'] = 'statistical-geography:' + row['key']
+            r.records[organisation]['feature'] = 'local-authority-boundary:' + row['key']
 
     r.dump(
         fields=[
@@ -35,7 +35,7 @@ if __name__ == "__main__":
             'name',
             'category',
             'website',
-            'area',
+            'feature',
             'start-date',
             'end-date'
         ],
