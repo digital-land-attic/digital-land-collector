@@ -4,7 +4,9 @@ PUBLICATIONS=\
    data/publication/lambeth-wards.md\
    data/publication/local-authority-districts.md\
    data/publication/mayoral-development-corporation-boundary.md\
+   data/publication/old-oak-and-park-royal-development-corporation-boundary.md\
    data/publication/national-park-boundary.md\
+   data/publication/school-locations-GLA.md\
    data/publication/uk-ward-boundary.md\
    data/publication/tree-preservation-order/tree-preservation-order-1.md\
    data/publication/tree-preservation-order/tree-preservation-order-2.md\
@@ -56,7 +58,8 @@ PUBLICATIONS=\
    data/publication/tree-preservation-order/tree-preservation-order-WGN.md\
    data/publication/tree-preservation-order/tree-preservation-order-WYO.md\
    data/publication/tree-preservation-order/tree-preservation-order-YOR.md\
-   data/publication/listed-buildings/listed-buildings-GRY.md
+   data/publication/listed-buildings/listed-buildings-GRY.md\
+   data/publication/historic-england/listed-buildings.md
 
 FEATURES=\
    data/feature/green-belt.geojson\
@@ -64,7 +67,9 @@ FEATURES=\
    data/feature/lambeth-wards.geojson\
    data/feature/local-authority-districts.geojson\
    data/feature/mayoral-development-corporation-boundary.geojson\
+   data/feature/old-oak-and-park-royal-development-corporation-boundary.geojson\
    data/feature/national-park-boundary.geojson\
+   data/feature/school-locations-GLA.geojson\
    data/feature/uk-ward-boundary.geojson\
    data/feature/tree-preservation-order-1.geojson\
    data/feature/tree-preservation-order-2.geojson\
@@ -113,7 +118,8 @@ FEATURES=\
    data/feature/tree-preservation-order-WGN.geojson\
    data/feature/tree-preservation-order-WYO.geojson\
    data/feature/tree-preservation-order-YOR.geojson\
-   data/feature/listed-buildings-GRY.geojson
+   data/feature/listed-buildings-GRY.geojson\
+   data/feature/listed-buildings.geojson
 
 var/cache/green-belt.zip:
 	@mkdir -p var/cache
@@ -170,6 +176,20 @@ var/geojson/mayoral-development-corporation-boundary.geojson:	var/cache/mayoral-
 	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/mayoral-development-corporation-boundary.zip/mdc-boundary-post-consultation.shp
 
 
+var/cache/old-oak-and-park-royal-development-corporation-boundary.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://files.datapress.com/london/dataset/old-oak-and-park-royal-development-corporation-boundary-/2016-07-28T11:44:40/OPDC-shp.zip' > $@
+
+data/feature/old-oak-and-park-royal-development-corporation-boundary.geojson:	var/geojson/old-oak-and-park-royal-development-corporation-boundary.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'statistical-geography' '' < var/geojson/old-oak-and-park-royal-development-corporation-boundary.geojson > $@
+
+
+var/geojson/old-oak-and-park-royal-development-corporation-boundary.geojson:	var/cache/old-oak-and-park-royal-development-corporation-boundary.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/old-oak-and-park-royal-development-corporation-boundary.zip/OPDC_region.shp
+
+
 var/cache/national-park-boundary.geojson:
 	@mkdir -p var/cache
 	curl --silent --show-error --location 'http://geoportal1-ons.opendata.arcgis.com/datasets/df607d4ffa124cdca8317e3e63d45d78_1.geojson' > $@
@@ -177,6 +197,20 @@ var/cache/national-park-boundary.geojson:
 data/feature/national-park-boundary.geojson:	var/geojson/national-park-boundary.geojson lib/geojson.py
 	@mkdir -p data/feature
 	python3 lib/geojson.py 'national-park-boundary' 'npark16cd' < var/geojson/national-park-boundary.geojson > $@
+
+
+var/cache/school-locations-GLA.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://files.datapress.com/london/dataset/london-schools-atlas/2017-05-04T14:00:20.06/All_schools_shp.zip' > $@
+
+data/feature/school-locations-GLA.geojson:	var/geojson/school-locations-GLA.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'school-locations:GLA' '' < var/geojson/school-locations-GLA.geojson > $@
+
+
+var/geojson/school-locations-GLA.geojson:	var/cache/school-locations-GLA.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/school-locations-GLA.zip/All_schools_shp/school_data_london_Atlas_2016.shp
 
 
 var/cache/uk-ward-boundary.geojson:
@@ -642,5 +676,19 @@ var/cache/listed-buildings-GRY.kml:
 
 data/feature/listed-buildings-GRY.geojson:	var/geojson/listed-buildings-GRY.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'listed-building' 'None' < var/geojson/listed-buildings-GRY.geojson > $@
+	python3 lib/geojson.py 'listed-building' 'Name' < var/geojson/listed-buildings-GRY.geojson > $@
+
+
+var/cache/listed-buildings.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://s3.eu-west-2.amazonaws.com/digital-land/english-heritage/2018-06-15/Listed+Buildings.zip' > $@
+
+data/feature/listed-buildings.geojson:	var/geojson/listed-buildings.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'listed-building' 'ListEntry' < var/geojson/listed-buildings.geojson > $@
+
+
+var/geojson/listed-buildings.geojson:	var/cache/listed-buildings.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/listed-buildings.zip/ListedBuildings_15June2018.shp
 
