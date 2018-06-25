@@ -59,7 +59,8 @@ PUBLICATIONS=\
    data/publication/tree-preservation-order/tree-preservation-order-WYO.md\
    data/publication/tree-preservation-order/tree-preservation-order-YOR.md\
    data/publication/listed-buildings/listed-buildings-GRY.md\
-   data/publication/historic-england/listed-buildings.md
+   data/publication/historic-england/listed-buildings.md\
+   data/publication/historic-england/battlefields.md
 
 FEATURES=\
    data/feature/green-belt.geojson\
@@ -119,7 +120,8 @@ FEATURES=\
    data/feature/tree-preservation-order-WYO.geojson\
    data/feature/tree-preservation-order-YOR.geojson\
    data/feature/listed-buildings-GRY.geojson\
-   data/feature/listed-buildings.geojson
+   data/feature/listed-buildings.geojson\
+   data/feature/battlefields.geojson
 
 var/cache/green-belt.zip:
 	@mkdir -p var/cache
@@ -691,4 +693,18 @@ data/feature/listed-buildings.geojson:	var/geojson/listed-buildings.geojson lib/
 var/geojson/listed-buildings.geojson:	var/cache/listed-buildings.zip
 	@mkdir -p var/geojson
 	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/listed-buildings.zip/ListedBuildings_15June2018.shp
+
+
+var/cache/battlefields.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://s3.eu-west-2.amazonaws.com/digital-land/english-heritage/2018-06-15/Battlefields.zip' > $@
+
+data/feature/battlefields.geojson:	var/geojson/battlefields.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'battlefield' 'ListEntry' < var/geojson/battlefields.geojson > $@
+
+
+var/geojson/battlefields.geojson:	var/cache/battlefields.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/battlefields.zip/Battlefields_15June2018.shp
 
