@@ -1,11 +1,35 @@
 PUBLICATIONS=\
+   data/publication/ancient-woodland.md\
+   data/publication/civil-parish-boundary.md\
+   data/publication/country-parks-england.md\
    data/publication/green-belt.md\
-   data/publication/historic-landfill.md\
-   data/publication/lambeth-wards.md\
+   data/publication/historic-england/battlefields.md\
+   data/publication/historic-england/building-preservation-notices.md\
+   data/publication/historic-england/certificates-of-immunity.md\
+   data/publication/historic-england/listed-buildings.md\
+   data/publication/historic-england/protected-wreck-sites.md\
+   data/publication/historic-england/registered-parks-and-gardens.md\
+   data/publication/historic-england/scheduled-monuments.md\
+   data/publication/historic-england/world-heritage-sites.md\
+   data/publication/lambeth/archaeological-priority-area.md\
+   data/publication/lambeth/conservation-area.md\
+   data/publication/lambeth/contaminated-land.md\
+   data/publication/lambeth/flood-risk-zone-2.md\
+   data/publication/lambeth/lambeth-wards.md\
+   data/publication/lambeth/protected-view.md\
+   data/publication/lambeth/site-allocations.md\
+   data/publication/lambeth/sites-of-borough-nature-conservation-importance.md\
+   data/publication/lambeth/strategic-cultural-area.md\
+   data/publication/lambeth/tunnel-safeguarding-lines.md\
+   data/publication/listed-buildings/listed-buildings-GRY.md\
    data/publication/local-authority-districts.md\
    data/publication/mayoral-development-corporation-boundary.md\
+   data/publication/millennium-greens.md\
    data/publication/national-park-boundary.md\
-   data/publication/uk-ward-boundary.md\
+   data/publication/old-oak-and-park-royal-development-corporation-boundary.md\
+   data/publication/ramsar-england.md\
+   data/publication/school-locations-GLA.md\
+   data/publication/special-protection-areas.md\
    data/publication/tree-preservation-order/tree-preservation-order-1.md\
    data/publication/tree-preservation-order/tree-preservation-order-2.md\
    data/publication/tree-preservation-order/tree-preservation-order-4.md\
@@ -56,16 +80,40 @@ PUBLICATIONS=\
    data/publication/tree-preservation-order/tree-preservation-order-WGN.md\
    data/publication/tree-preservation-order/tree-preservation-order-WYO.md\
    data/publication/tree-preservation-order/tree-preservation-order-YOR.md\
-   data/publication/listed-buildings/listed-buildings-GRY.md
+   data/publication/uk-ward-boundary.md
 
 FEATURES=\
+   data/feature/ancient-woodlands-england.geojson\
+   data/feature/civil-parish-boundary.geojson\
+   data/feature/country-parks-england.geojson\
    data/feature/green-belt.geojson\
-   data/feature/historic-landfill.geojson\
+   data/feature/battlefields.geojson\
+   data/feature/building-preservation-notices.geojson\
+   data/feature/certificates-of-immunity.geojson\
+   data/feature/listed-buildings.geojson\
+   data/feature/protected-wreck-sites.geojson\
+   data/feature/registered-parks-and-gardens.geojson\
+   data/feature/scheduled-monuments.geojson\
+   data/feature/world-heritage-sites.geojson\
+   data/feature/lambeth-archaeological-priority-areas.geojson\
+   data/feature/lambeth-conservation-areas.geojson\
+   data/feature/lambeth-contaminated-land.geojson\
+   data/feature/lambeth-flood-risk-zone-2.geojson\
    data/feature/lambeth-wards.geojson\
+   data/feature/lambeth-local-views.geojson\
+   data/feature/lambeth-site-allocations.geojson\
+   data/feature/lambeth-sites-of-borough-nature-conservation-importance.geojson\
+   data/feature/lambeth-strategic-cultural-areas.geojson\
+   data/feature/lambeth-tunnel-safeguarding-lines.geojson\
+   data/feature/listed-buildings-GRY.geojson\
    data/feature/local-authority-districts.geojson\
    data/feature/mayoral-development-corporation-boundary.geojson\
+   data/feature/millennium-greens.geojson\
    data/feature/national-park-boundary.geojson\
-   data/feature/uk-ward-boundary.geojson\
+   data/feature/old-oak-and-park-royal-development-corporation-boundary.geojson\
+   data/feature/ramsar-england.geojson\
+   data/feature/school-locations-GLA.geojson\
+   data/feature/special-protection-areas.geojson\
    data/feature/tree-preservation-order-1.geojson\
    data/feature/tree-preservation-order-2.geojson\
    data/feature/tree-preservation-order-4.geojson\
@@ -113,7 +161,34 @@ FEATURES=\
    data/feature/tree-preservation-order-WGN.geojson\
    data/feature/tree-preservation-order-WYO.geojson\
    data/feature/tree-preservation-order-YOR.geojson\
-   data/feature/listed-buildings-GRY.geojson
+   data/feature/uk-ward-boundary.geojson
+
+var/cache/ancient-woodlands-england.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/45d3eebaebf847ac8c9f328091af5571_0.geojson' > $@
+
+data/feature/ancient-woodlands-england.geojson:	var/geojson/ancient-woodlands-england.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'ancient-woodland' 'objectid' < var/geojson/ancient-woodlands-england.geojson > $@
+
+
+var/cache/civil-parish-boundary.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/ac7333bdcfc3436d80fa48d5d6266004_1.geojson' > $@
+
+data/feature/civil-parish-boundary.geojson:	var/geojson/civil-parish-boundary.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'civil-parish-boundary' 'par17cd' < var/geojson/civil-parish-boundary.geojson > $@
+
+
+var/cache/country-parks-england.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/a11befa8e6dc4227a7082d81bb1ddbdb_0.geojson' > $@
+
+data/feature/country-parks-england.geojson:	var/geojson/country-parks-england.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'country-park' 'REF_CODE' < var/geojson/country-parks-england.geojson > $@
+
 
 var/cache/green-belt.zip:
 	@mkdir -p var/cache
@@ -129,13 +204,152 @@ var/geojson/green-belt.geojson:	var/cache/green-belt.zip
 	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/green-belt.zip/Local_Authority_Greenbelt_boundaries_2016-17.shp
 
 
-var/cache/historic-landfill.gml:
+var/cache/battlefields.zip:
 	@mkdir -p var/cache
-	curl --silent --show-error --location 'http://www.geostore.com/OGC/OGCInterface;jsessionid=JJ7Qf4H4jNTPSzkZ3NXRe95s?SESSIONID=-2109512248&INTERFACE=ENVIRONMENTWFS&SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=ms:ea_wfs_historic_landfill' > $@
+	curl --silent --show-error --location 'https://s3.eu-west-2.amazonaws.com/digital-land/english-heritage/2018-06-15/Battlefields.zip' > $@
 
-data/feature/historic-landfill.geojson:	var/geojson/historic-landfill.geojson lib/geojson.py
+data/feature/battlefields.geojson:	var/geojson/battlefields.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'historic-landfill-site' 'hid_ref' < var/geojson/historic-landfill.geojson > $@
+	python3 lib/geojson.py 'battlefield' 'ListEntry' < var/geojson/battlefields.geojson > $@
+
+
+var/geojson/battlefields.geojson:	var/cache/battlefields.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/battlefields.zip/Battlefields_15June2018.shp
+
+
+var/cache/building-preservation-notices.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://s3.eu-west-2.amazonaws.com/digital-land/english-heritage/2018-06-15/Building+Preservation+Notices.zip' > $@
+
+data/feature/building-preservation-notices.geojson:	var/geojson/building-preservation-notices.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'building-preservation-notice' 'ListEntry' < var/geojson/building-preservation-notices.geojson > $@
+
+
+var/geojson/building-preservation-notices.geojson:	var/cache/building-preservation-notices.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/building-preservation-notices.zip/BuildingPreservationNotices_15June2018.shp
+
+
+var/cache/certificates-of-immunity.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://s3.eu-west-2.amazonaws.com/digital-land/english-heritage/2018-06-15/Certificates+of+Immunity.zip' > $@
+
+data/feature/certificates-of-immunity.geojson:	var/geojson/certificates-of-immunity.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'certificate-of-immunity' 'ListEntry' < var/geojson/certificates-of-immunity.geojson > $@
+
+
+var/geojson/certificates-of-immunity.geojson:	var/cache/certificates-of-immunity.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/certificates-of-immunity.zip/CertificatesOfImmunity_15June2018.shp
+
+
+var/cache/listed-buildings.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://s3.eu-west-2.amazonaws.com/digital-land/english-heritage/2018-06-15/Listed+Buildings.zip' > $@
+
+data/feature/listed-buildings.geojson:	var/geojson/listed-buildings.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'listed-building' 'ListEntry' < var/geojson/listed-buildings.geojson > $@
+
+
+var/geojson/listed-buildings.geojson:	var/cache/listed-buildings.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/listed-buildings.zip/ListedBuildings_15June2018.shp
+
+
+var/cache/protected-wreck-sites.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://s3.eu-west-2.amazonaws.com/digital-land/english-heritage/2018-06-15/Protected+Wreck+Sites+(England).zip' > $@
+
+data/feature/protected-wreck-sites.geojson:	var/geojson/protected-wreck-sites.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'protected-wreck-site' 'ListEntry' < var/geojson/protected-wreck-sites.geojson > $@
+
+
+var/geojson/protected-wreck-sites.geojson:	var/cache/protected-wreck-sites.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/protected-wreck-sites.zip/ProtectedWrecks_15June2018.shp
+
+
+var/cache/registered-parks-and-gardens.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://s3.eu-west-2.amazonaws.com/digital-land/english-heritage/2018-06-15/Parks+and+Gardens.zip' > $@
+
+data/feature/registered-parks-and-gardens.geojson:	var/geojson/registered-parks-and-gardens.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'park-and-garden' 'ListEntry' < var/geojson/registered-parks-and-gardens.geojson > $@
+
+
+var/geojson/registered-parks-and-gardens.geojson:	var/cache/registered-parks-and-gardens.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/registered-parks-and-gardens.zip/ParksAndGardens_15June2018.shp
+
+
+var/cache/scheduled-monuments.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://s3.eu-west-2.amazonaws.com/digital-land/english-heritage/2018-06-15/Scheduled+Monuments.zip' > $@
+
+data/feature/scheduled-monuments.geojson:	var/geojson/scheduled-monuments.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'scheduled-monument' 'ListEntry' < var/geojson/scheduled-monuments.geojson > $@
+
+
+var/geojson/scheduled-monuments.geojson:	var/cache/scheduled-monuments.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/scheduled-monuments.zip/ScheduledMonuments_15June2018.shp
+
+
+var/cache/world-heritage-sites.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://s3.eu-west-2.amazonaws.com/digital-land/english-heritage/2018-06-15/World+Heritage+Sites.zip' > $@
+
+data/feature/world-heritage-sites.geojson:	var/geojson/world-heritage-sites.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'world-heritage-site' 'ListEntry' < var/geojson/world-heritage-sites.geojson > $@
+
+
+var/geojson/world-heritage-sites.geojson:	var/cache/world-heritage-sites.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/world-heritage-sites.zip/WorldHeritageSites_15June2018.shp
+
+
+var/cache/lambeth-archaeological-priority-areas.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/e304f6fb73574e00ae1d2493092f0d61_0.geojson' > $@
+
+data/feature/lambeth-archaeological-priority-areas.geojson:	var/geojson/lambeth-archaeological-priority-areas.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'lambeth-archaeological-priority-area' 'REF' < var/geojson/lambeth-archaeological-priority-areas.geojson > $@
+
+
+var/cache/lambeth-conservation-areas.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/e304f6fb73574e00ae1d2493092f0d61_2.geojson' > $@
+
+data/feature/lambeth-conservation-areas.geojson:	var/geojson/lambeth-conservation-areas.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'lambeth-conservation-area' 'CA_REF_NO' < var/geojson/lambeth-conservation-areas.geojson > $@
+
+
+var/cache/lambeth-contaminated-land.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/72268e4c4c3245909d8505fbe866906e_0.geojson' > $@
+
+data/feature/lambeth-contaminated-land.geojson:	var/geojson/lambeth-contaminated-land.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'lambeth-contaminated-land' 'OBJECTID' < var/geojson/lambeth-contaminated-land.geojson > $@
+
+
+var/cache/lambeth-flood-risk-zone-2.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/b67578fd84bf478cac78a0ef1e6e2d46_0.geojson' > $@
+
+data/feature/lambeth-flood-risk-zone-2.geojson:	var/geojson/lambeth-flood-risk-zone-2.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'lambeth-flood-risk-zone-2' 'OBJECTID' < var/geojson/lambeth-flood-risk-zone-2.geojson > $@
 
 
 var/cache/lambeth-wards.geojson:
@@ -145,6 +359,60 @@ var/cache/lambeth-wards.geojson:
 data/feature/lambeth-wards.geojson:	var/geojson/lambeth-wards.geojson lib/geojson.py
 	@mkdir -p data/feature
 	python3 lib/geojson.py 'lambeth-wards' 'ONS_WARD_CODE' < var/geojson/lambeth-wards.geojson > $@
+
+
+var/cache/lambeth-local-views.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/1a060268b3054c39912647bae178d758_6.geojson' > $@
+
+data/feature/lambeth-local-views.geojson:	var/geojson/lambeth-local-views.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'lambeth-local-view' 'OBJECTID' < var/geojson/lambeth-local-views.geojson > $@
+
+
+var/cache/lambeth-site-allocations.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/ea3cdce1751840ec81a7912d34a7be21_0.geojson' > $@
+
+data/feature/lambeth-site-allocations.geojson:	var/geojson/lambeth-site-allocations.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'lambeth-site-allocations' 'OBJECTID' < var/geojson/lambeth-site-allocations.geojson > $@
+
+
+var/cache/lambeth-sites-of-borough-nature-conservation-importance.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/88f412c44fcb44b298495e9282343807_1.geojson' > $@
+
+data/feature/lambeth-sites-of-borough-nature-conservation-importance.geojson:	var/geojson/lambeth-sites-of-borough-nature-conservation-importance.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'lambeth-site-of-borough-nature-conservation-importance' 'OBJECTID' < var/geojson/lambeth-sites-of-borough-nature-conservation-importance.geojson > $@
+
+
+var/cache/lambeth-strategic-cultural-areas.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/2496f84d95fe4b2886662722f62f429e_0.geojson' > $@
+
+data/feature/lambeth-strategic-cultural-areas.geojson:	var/geojson/lambeth-strategic-cultural-areas.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'lambeth-strategic-cultural-area' 'OBJECTID' < var/geojson/lambeth-strategic-cultural-areas.geojson > $@
+
+
+var/cache/lambeth-tunnel-safeguarding-lines.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/5d4d40f6b24440c99c084ed077ead5bb_0.geojson' > $@
+
+data/feature/lambeth-tunnel-safeguarding-lines.geojson:	var/geojson/lambeth-tunnel-safeguarding-lines.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'lambeth-tunnel-safeguarding-line' 'OBJECTID' < var/geojson/lambeth-tunnel-safeguarding-lines.geojson > $@
+
+
+var/cache/listed-buildings-GRY.kml:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'http://maps.norfolk.gov.uk/inspire/data/great_yarmouth_borough_council/listedbuildings/Great%20Yarmouth%20Borough%20Council%20Listed%20Buildings.kml' > $@
+
+data/feature/listed-buildings-GRY.geojson:	var/geojson/listed-buildings-GRY.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'listed-building' 'Name' < var/geojson/listed-buildings-GRY.geojson > $@
 
 
 var/cache/local-authority-districts.geojson:
@@ -170,6 +438,15 @@ var/geojson/mayoral-development-corporation-boundary.geojson:	var/cache/mayoral-
 	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/mayoral-development-corporation-boundary.zip/mdc-boundary-post-consultation.shp
 
 
+var/cache/millennium-greens.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/73247b05a5054fe6b04dcc6b39fd89f2_0.geojson' > $@
+
+data/feature/millennium-greens.geojson:	var/geojson/millennium-greens.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'millennium-green' 'EXTERNALID' < var/geojson/millennium-greens.geojson > $@
+
+
 var/cache/national-park-boundary.geojson:
 	@mkdir -p var/cache
 	curl --silent --show-error --location 'http://geoportal1-ons.opendata.arcgis.com/datasets/df607d4ffa124cdca8317e3e63d45d78_1.geojson' > $@
@@ -179,13 +456,50 @@ data/feature/national-park-boundary.geojson:	var/geojson/national-park-boundary.
 	python3 lib/geojson.py 'national-park-boundary' 'npark16cd' < var/geojson/national-park-boundary.geojson > $@
 
 
-var/cache/uk-ward-boundary.geojson:
+var/cache/old-oak-and-park-royal-development-corporation-boundary.zip:
 	@mkdir -p var/cache
-	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/afcc88affe5f450e9c03970b237a7999_1.geojson' > $@
+	curl --silent --show-error --location 'https://files.datapress.com/london/dataset/old-oak-and-park-royal-development-corporation-boundary-/2016-07-28T11:44:40/OPDC-shp.zip' > $@
 
-data/feature/uk-ward-boundary.geojson:	var/geojson/uk-ward-boundary.geojson lib/geojson.py
+data/feature/old-oak-and-park-royal-development-corporation-boundary.geojson:	var/geojson/old-oak-and-park-royal-development-corporation-boundary.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'ward-boundary' 'wd16cd' < var/geojson/uk-ward-boundary.geojson > $@
+	python3 lib/geojson.py 'statistical-geography' '' < var/geojson/old-oak-and-park-royal-development-corporation-boundary.geojson > $@
+
+
+var/geojson/old-oak-and-park-royal-development-corporation-boundary.geojson:	var/cache/old-oak-and-park-royal-development-corporation-boundary.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/old-oak-and-park-royal-development-corporation-boundary.zip/OPDC_region.shp
+
+
+var/cache/ramsar-england.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/13b5f06edc88471db479b49b4ac04a43_0.geojson' > $@
+
+data/feature/ramsar-england.geojson:	var/geojson/ramsar-england.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'ramsar-england' 'CODE' < var/geojson/ramsar-england.geojson > $@
+
+
+var/cache/school-locations-GLA.zip:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://files.datapress.com/london/dataset/london-schools-atlas/2017-05-04T14:00:20.06/All_schools_shp.zip' > $@
+
+data/feature/school-locations-GLA.geojson:	var/geojson/school-locations-GLA.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'school-locations:GLA' '' < var/geojson/school-locations-GLA.geojson > $@
+
+
+var/geojson/school-locations-GLA.geojson:	var/cache/school-locations-GLA.zip
+	@mkdir -p var/geojson
+	ogr2ogr -f geojson -t_srs EPSG:4326 $@ /vsizip/var/cache/school-locations-GLA.zip/All_schools_shp/school_data_london_Atlas_2016.shp
+
+
+var/cache/special-protection-areas.geojson:
+	@mkdir -p var/cache
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/d14f45c1b0a649d9bebf3bf5e9c83a58_0.geojson' > $@
+
+data/feature/special-protection-areas.geojson:	var/geojson/special-protection-areas.geojson lib/geojson.py
+	@mkdir -p data/feature
+	python3 lib/geojson.py 'special-protection-area' 'SPA_CODE' < var/geojson/special-protection-areas.geojson > $@
 
 
 var/cache/tree-preservation-order-1.gml:
@@ -636,11 +950,11 @@ data/feature/tree-preservation-order-YOR.geojson:	var/geojson/tree-preservation-
 	python3 lib/geojson.py 'tree-preservation-order:YOR' 'None' < var/geojson/tree-preservation-order-YOR.geojson > $@
 
 
-var/cache/listed-buildings-GRY.kml:
+var/cache/uk-ward-boundary.geojson:
 	@mkdir -p var/cache
-	curl --silent --show-error --location 'http://maps.norfolk.gov.uk/inspire/data/great_yarmouth_borough_council/listedbuildings/Great%20Yarmouth%20Borough%20Council%20Listed%20Buildings.kml' > $@
+	curl --silent --show-error --location 'https://opendata.arcgis.com/datasets/afcc88affe5f450e9c03970b237a7999_1.geojson' > $@
 
-data/feature/listed-buildings-GRY.geojson:	var/geojson/listed-buildings-GRY.geojson lib/geojson.py
+data/feature/uk-ward-boundary.geojson:	var/geojson/uk-ward-boundary.geojson lib/geojson.py
 	@mkdir -p data/feature
-	python3 lib/geojson.py 'listed-building' 'None' < var/geojson/listed-buildings-GRY.geojson > $@
+	python3 lib/geojson.py 'ward-boundary' 'wd16cd' < var/geojson/uk-ward-boundary.geojson > $@
 
