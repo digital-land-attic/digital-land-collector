@@ -1,11 +1,11 @@
-national-park	name	start-date	website	area
-1	Peak District	1951-04-17	http://www.peakdistrict.gov.uk/	statistical-geography:E26000006
-2	Lake District	1951-05-09	http://www.lakedistrict.gov.uk/	statistical-geography:E26000011
-3	Dartmoor	1951-10-30	http://www.dartmoor-npa.gov.uk/	statistical-geography:E26000001
-4	North York Moors	1952-01-11	http://www.northyorkmoors.org.uk/	statistical-geography:E26000005
-5	Yorkshire Dales	1954-11-16	http://www.yorkshiredales.org.uk/	statistical-geography:E26000012
-6	Exmoor	1954-10-19	http://www.exmoor-nationalpark.gov.uk/	statistical-geography:E26000002
-7	Northumberland	1956-04-06	http://www.northumberlandnationalpark.org.uk/	statistical-geography:E26000004
-8	The Broads	1989-04-01	http://www.broads-authority.gov.uk/	statistical-geography:E26000007
-9	New Forest	2005-03-01	http://www.newforestnpa.gov.uk/	statistical-geography:E26000009
-10	South Downs	2009-11-12	http://southdowns.gov.uk/	statistical-geography:E26000010
+national-park	name	start-date	website	feature
+1	Peak District	1951-04-17	http://www.peakdistrict.gov.uk/	national-park-boundary:E26000006
+2	Lake District	1951-05-09	http://www.lakedistrict.gov.uk/	national-park-boundary:E26000011
+3	Dartmoor	1951-10-30	http://www.dartmoor-npa.gov.uk/	national-park-boundary:E26000001
+4	North York Moors	1952-01-11	http://www.northyorkmoors.org.uk/	national-park-boundary:E26000005
+5	Yorkshire Dales	1954-11-16	http://www.yorkshiredales.org.uk/	national-park-boundary:E26000012
+6	Exmoor	1954-10-19	http://www.exmoor-nationalpark.gov.uk/	national-park-boundary:E26000002
+7	Northumberland	1956-04-06	http://www.northumberlandnationalpark.org.uk/	national-park-boundary:E26000004
+8	The Broads	1989-04-01	http://www.broads-authority.gov.uk/	national-park-boundary:E26000007
+9	New Forest	2005-03-01	http://www.newforestnpa.gov.uk/	national-park-boundary:E26000009
+10	South Downs	2009-11-12	http://southdowns.gov.uk/	national-park-boundary:E26000010
