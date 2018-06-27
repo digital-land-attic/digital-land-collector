@@ -70,25 +70,17 @@ def feature(f, item, publication, prefix, key):
     if f['type'] != 'Feature':
         raise ValueError('invald feature', f['type'])
 
-    p = f['properties']
-
-
-    properties = {}
-
-    properties['item'] = item
+    f['properties']['item'] = item
 
     if publication:
-        properties['publication'] = publication
+        f['properties']['publication'] = publication
 
-    if key and key in p:
-        properties['feature'] = "%s:%s" % (prefix, p[key])
-
-    # collect properties from source data
-    properties['source_properties'] = p
+    if key and key in f['properties']:
+        f['properties']['feature'] = "%s:%s" % (prefix, f['properties'][key])
 
     return {
         "type": "Feature",
-        "properties": properties,
+        "properties": f['properties'],
         "geometry": geometry(f['geometry'])
     }
 
