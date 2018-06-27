@@ -6,14 +6,18 @@
 
     Assumes coordinates are in WGS84
 """
+import sys
 
 try:
     import ijson.backends.yajl2_cffi as ijson
+    input = sys.stdin.buffer
 except ImportError:
     import ijson
+    input = sys.stdin
+
+output = sys.stdout
 
 import json
-import sys
 import os
 from decimal import Decimal
 import hashlib
@@ -67,6 +71,8 @@ def feature(f, item, publication, prefix, key):
         raise ValueError('invald feature', f['type'])
 
     p = f['properties']
+
+
     properties = {}
 
     properties['item'] = item
@@ -76,6 +82,9 @@ def feature(f, item, publication, prefix, key):
 
     if key and key in p:
         properties['feature'] = "%s:%s" % (prefix, p[key])
+
+    # collect properties from source data
+    properties['source_properties'] = p
 
     return {
         "type": "Feature",
@@ -88,7 +97,7 @@ def dumps(obj):
     return json.dumps(obj, default=decimal_default, separators=(',', ':'), sort_keys=True)
 
 
-def c14n(publication, prefix, key, ifp=sys.stdin, ofp=sys.stdout):
+def c14n(publication, prefix, key, ifp=input, ofp=output):
     print('{ "type": "FeatureCollection", "features": [', file=ofp, end="")
 
     features = ijson.items(ifp, 'features.item')
