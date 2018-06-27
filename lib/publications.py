@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
 {feature}:\t{geojson} lib/geojson.py
 \t@mkdir -p data/feature
-\tpython3 lib/geojson.py '{prefix}' '{key}' < {geojson} > $@
+\tpython3 lib/geojson.py '{publication}' '{prefix}' '{key}' < {geojson} > $@
 """.format(**item))
 
         if item['task'] == 'shape-zip':

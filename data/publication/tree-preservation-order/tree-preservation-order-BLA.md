@@ -10,6 +10,7 @@ data-url: http://w3.blaby.gov.uk/geoserver/inspire/ows?service=WFS&version=1.0.0
 task: gml
 key: 
 categories: Tree preservation order
+srs: EPSG:27700
 ---
 
 Tree Preservation Orders
