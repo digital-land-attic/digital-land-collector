@@ -49,6 +49,11 @@ var/geojson/%.geojson: var/cache/%.kml
 	@mkdir -p var/geojson/
 	ogr2ogr -f geojson -t_srs EPSG:4326 $@ $<
 
+#
+#  rebuild publication index
+#
+data/publication/index.tsv:
+	bin/index.sh data/publication
 
 #
 #  phony

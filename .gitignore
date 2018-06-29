@@ -10,3 +10,4 @@ var
 tmp
 data/feature
 makefiles/publications.mk
+data/publication/index.tsv
