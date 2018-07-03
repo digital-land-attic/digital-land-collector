@@ -11,15 +11,18 @@ wgs84 = pyproj.Proj(init='epsg:4326')
 
 
 def geometry(row):
-    lon = float(row['GeoX'])
-    lat = float(row['GeoY'])
-
-    if lon > 10000:
-        # sniffed bng coordinate system
-        lon, lat = pyproj.transform(bng, wgs84, lon, lat)
-    elif lon > 49 and lon < 60 and lat < 0:
-        # sniffed swapped coordinates
-        lat, lon = lon, lat
+    try:
+        lon = float(row['GeoX'])
+        lat = float(row['GeoY'])
+        if lon > 10000:
+            # sniffed bng coordinate system
+            lon, lat = pyproj.transform(bng, wgs84, lon, lat)
+        elif lon > 49 and lon < 60 and lat < 0:
+            # sniffed swapped coordinates
+            lat, lon = lon, lat
+    except Exception as e:
+        print("invalid point:", row, file=sys.stderr)
+        raise e
 
     return {
         "type": "Point",
@@ -35,15 +38,13 @@ def feature(row):
     }
 
 
-class items(object):
-    def __init__(self, fp):
-        self.reader = csv.DictReader(fp)
-   
-    def __iter__(self):
-        return self
-   
-    def __next__(self):
-        return feature(next(self.reader))
+def items(fp):
+    for row in csv.DictReader(fp):
+        if all(not(value) for value in row.values()):
+            # some CSV files contain blank lines
+            continue
+
+        yield feature(row)
 
 
 def csv2geojson(input=sys.stdin, file=sys.stdout):
