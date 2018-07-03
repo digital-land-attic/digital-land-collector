@@ -44,6 +44,10 @@ def items(fp):
             # some CSV files contain blank lines
             continue
 
+        if row.get('GeoY') == 'GeoY':
+            # some CSV files contain duplicate title rows
+            continue
+
         yield feature(row)
 
 
