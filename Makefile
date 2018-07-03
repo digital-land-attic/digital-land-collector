@@ -23,6 +23,7 @@ makefiles/publications.mk:	$(PUBLICATIONS) data/publication/index.tsv lib/public
 #
 TARGETS=\
 	data/organisation.tsv \
+	data/publication/index.tsv \
 	$(FEATURES)
 
 ETC=\
@@ -53,7 +54,7 @@ var/geojson/%.geojson: var/cache/%.kml
 #  rebuild publication index
 #
 data/publication/index.tsv:
-	bin/index.sh data/publication
+	bin/index.sh data/publication > $@
 
 #
 #  phony
