@@ -6,6 +6,19 @@ import pyproj
 import geojson
 
 
+class DictReader(csv.DictReader):
+    """
+    Some CSV files contain spurious whitespaces in column names
+    """
+    @property                                    
+    def fieldnames(self):
+        if self._fieldnames is None:
+            csv.DictReader.fieldnames.fget(self)
+            if self._fieldnames is not None:
+                self._fieldnames = [name.strip() for name in self._fieldnames]
+        return self._fieldnames
+
+
 bng = pyproj.Proj(init='epsg:27700')
 wgs84 = pyproj.Proj(init='epsg:4326')
 
@@ -39,7 +52,7 @@ def feature(row):
 
 
 def items(fp):
-    for row in csv.DictReader(fp):
+    for row in DictReader(fp):
         if all(not(value) for value in row.values()):
             # some CSV files contain blank lines
             continue
