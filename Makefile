@@ -64,6 +64,10 @@ var/csv/%.csv: var/cache/%.csv
 	@mkdir -p var/csv/
 	in2csv $< > $@
 
+var/csv/%.csv: var/cache/%.xls
+	@mkdir -p var/csv/
+	in2csv $< > $@
+
 var/csv/%.csv: var/cache/%.xlsx
 	@mkdir -p var/csv/
 	in2csv $< > $@
