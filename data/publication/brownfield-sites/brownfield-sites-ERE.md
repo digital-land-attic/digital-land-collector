@@ -8,6 +8,7 @@ data-url: https://erewash.gov.uk/media/EBC/web-files/planning/erewash_brownfield
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-ERE
+suffix: .txt
 ---
 
 Brownfield sites

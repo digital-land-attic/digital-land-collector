@@ -8,6 +8,7 @@ data-url: http://files.datapress.com/london/dataset/brownfield-land-register/201
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-HMF
+suffix: .txt
 ---
 
 Brownfield sites

@@ -8,6 +8,7 @@ data-url: http://www.royalgreenwich.gov.uk/download/downloads/id/3572/brownfield
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-GRE
+suffix: .txt
 ---
 
 Brownfield sites

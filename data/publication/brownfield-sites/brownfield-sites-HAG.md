@@ -8,6 +8,7 @@ data-url: https://www.harrogate.gov.uk/download/downloads/id/3132/12-12-2017_har
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-HAG
+suffix: .txt
 ---
 
 Brownfield sites
