@@ -8,6 +8,7 @@ data-url: https://new.enfield.gov.uk/services/planning/planning-policy/local-pla
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-ENF
+suffix: .xlsx
 ---
 
 Brownfield sites

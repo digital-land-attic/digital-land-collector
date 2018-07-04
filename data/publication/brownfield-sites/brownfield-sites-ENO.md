@@ -6,7 +6,7 @@ copyright: crown-copyright
 licence: ogl
 data-url: http://www.nnjpu.org.uk/docs/BrownfieldLandRegisterTemplate%20-%202017%20Update%20-%20ONLINE%20VERSION.xlsm
 data-gov-uk: 
-task: csv
+task: _csv_xlsm
 prefix: brownfield-site-ENO
 ---
 

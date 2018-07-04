@@ -6,8 +6,9 @@ copyright: crown-copyright
 licence: ogl
 data-url: https://www.eastherts.gov.uk/media/32457/Brownfield-Register/spreadsheet/Brownfield_Land_Register-_Excel.xlsx
 data-gov-uk: 
-task: csv
+task: _csv_404
 prefix: brownfield-site-EHE
+suffix: .xlsx
 ---
 
 Brownfield sites

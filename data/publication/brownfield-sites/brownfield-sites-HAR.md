@@ -8,6 +8,7 @@ data-url: http://www.harlow.gov.uk/sites/harlow-cms/files/files/documents/files/
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-HAR
+suffix: .txt
 ---
 
 Brownfield sites

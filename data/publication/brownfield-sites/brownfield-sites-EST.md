@@ -8,6 +8,7 @@ data-url: http://www.eaststaffsbc.gov.uk/sites/default/files/docs/planning/plann
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-EST
+suffix: .txt
 ---
 
 Brownfield sites

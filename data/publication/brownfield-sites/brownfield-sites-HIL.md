@@ -8,6 +8,7 @@ data-url: https://www.hillingdon.gov.uk/media/38639/CSV-file/xls/hillingdon_brow
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-HIL
+suffix: .txt
 ---
 
 Brownfield sites

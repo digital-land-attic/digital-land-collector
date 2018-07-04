@@ -8,6 +8,7 @@ data-url: https://www.guildford.gov.uk/media/26733/Guildford-Borough-Council-Bro
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-GRT
+suffix: .txt
 ---
 
 Brownfield sites
