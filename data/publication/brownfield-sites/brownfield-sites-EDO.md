@@ -4,9 +4,10 @@ name: Brownfield Sites
 organisation: local-authority-eng:EDO
 copyright: crown-copyright
 licence: ogl
-data-url: https://www.dorsetforyou.gov.uk/media/224212/east-dorset_brownfieldregister_2017-12-19_rev1/doc/east-dorset_brownfieldregister_2017-12-19_rev1.csv
+documentation-url: https://www.dorsetforyou.gov.uk/planning-buildings-land/planning-policy/east-dorset-planning-policy/local-development-framework/christchurch-and-east-dorset-brownfield-land-registers.aspx
+data-url: https://www.dorsetforyou.gov.uk/planning-buildings-land/planning-policy/east-dorset-planning-policy/local-development-framework/pdfs/brownfield-land-registers/east-dorset-brownfield-register-2017.12.19-rev1-excel.csv
 data-gov-uk: 
-task: _csv_404
+task: csv
 prefix: brownfield-site-EDO
 ---
 

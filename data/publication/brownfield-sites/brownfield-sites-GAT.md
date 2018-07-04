@@ -4,9 +4,10 @@ name: Brownfield Sites
 organisation: local-authority-eng:GAT
 copyright: crown-copyright
 licence: ogl
-data-url: http://www.gateshead.gov.uk/DocumentLibrary/Building/planning/gateshead-brownfieldregister-2017-12-21-rev1.csv.csv
+documentation-url: https://www.gateshead.gov.uk/article/3017/Brownfield-Register-December-2017
+data-url: https://www.gateshead.gov.uk/media/6902/Gateshead-brownfield-register/excel/gateshead-brownfieldregister-2017-12-21-rev1.csv.csv
 data-gov-uk: 
-task: _csv_404
+task: csv
 prefix: brownfield-site-GAT
 ---
 
