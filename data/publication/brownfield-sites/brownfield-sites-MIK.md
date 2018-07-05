@@ -8,6 +8,7 @@ data-url: https://www.milton-keynes.gov.uk/assets/attach/49208/milton-keynes_bro
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-MIK
+suffix: .txt
 ---
 
 Brownfield sites

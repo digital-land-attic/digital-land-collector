@@ -8,6 +8,7 @@ data-url: https://www.lambeth.gov.uk/sites/default/files/lambeth_brownfieldregis
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-LBH
+suffix: .txt
 ---
 
 Brownfield sites

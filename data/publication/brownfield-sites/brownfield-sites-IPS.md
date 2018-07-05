@@ -8,6 +8,7 @@ data-url: https://www.ipswich.gov.uk/sites/default/files/ipswich_brownfieldregis
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-IPS
+suffix: .txt
 ---
 
 Brownfield sites

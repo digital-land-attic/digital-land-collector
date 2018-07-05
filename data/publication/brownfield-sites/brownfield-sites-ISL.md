@@ -8,6 +8,7 @@ data-url: https://www.islington.gov.uk/~/media/sharepoint-lists/public-records/p
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-ISL
+suffix: .txt
 ---
 
 Brownfield sites

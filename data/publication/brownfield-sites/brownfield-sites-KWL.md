@@ -8,6 +8,7 @@ data-url: http://www.knowsley.gov.uk/knowsleycouncil/media/Documents/Knowsley-MB
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-KWL
+suffix: .xlsx
 ---
 
 Brownfield sites

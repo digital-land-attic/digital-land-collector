@@ -8,6 +8,7 @@ data-url: http://www.harrow.gov.uk/download/downloads/id/10631/harrow_s_brownfie
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-HRW
+suffix: .txt
 ---
 
 Brownfield sites

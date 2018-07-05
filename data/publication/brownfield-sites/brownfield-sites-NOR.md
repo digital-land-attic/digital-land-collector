@@ -8,6 +8,7 @@ data-url: https://www.northampton.gov.uk/download/downloads/id/10117/171220-nbc-
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-NOR
+suffix: .txt
 ---
 
 Brownfield sites

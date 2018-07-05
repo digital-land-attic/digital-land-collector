@@ -8,6 +8,7 @@ data-url: https://www.lewisham.gov.uk/myservices/planning/policy/Documents/Brown
 data-gov-uk: 292889d5-fc9d-4d4b-a1ba-74b60e9d00ef
 task: csv
 prefix: brownfield-site-LEW
+suffix: .txt
 ---
 
 Brownfield sites

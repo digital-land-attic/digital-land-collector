@@ -8,6 +8,7 @@ data-url: http://www.maldon.gov.uk/download/downloads/id/15993/maldon_district_b
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-MAL
+suffix: .xlsx
 ---
 
 Brownfield sites

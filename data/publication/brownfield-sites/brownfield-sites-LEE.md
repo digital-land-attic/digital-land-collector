@@ -8,6 +8,7 @@ data-url: http://www.lewes-eastbourne.gov.uk/_resources/assets/inline/full/0/263
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-LEE
+suffix: .txt
 ---
 
 Brownfield sites

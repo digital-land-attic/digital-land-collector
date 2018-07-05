@@ -8,6 +8,7 @@ data-url: http://hullcc-consult.limehouse.co.uk/file/4825189
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-KHL
+suffix: .txt
 ---
 
 Brownfield sites

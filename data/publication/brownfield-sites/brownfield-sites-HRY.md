@@ -8,6 +8,7 @@ data-url: http://www.haringey.gov.uk/sites/haringeygovuk/files/haringey_brownfie
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-HRY
+suffix: .txt
 ---
 
 Brownfield sites

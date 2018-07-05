@@ -8,6 +8,7 @@ data-url: https://files.datapress.com/leeds/dataset/newcastle-city-council-brown
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-NET
+suffix: .txt
 ---
 
 Brownfield sites

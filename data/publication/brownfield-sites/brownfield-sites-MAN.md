@@ -8,6 +8,7 @@ data-url: http://www.manchester.gov.uk/download/downloads/id/25609/2017_manchest
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-MAN
+suffix: .txt
 ---
 
 Brownfield sites

@@ -8,6 +8,7 @@ data-url: https://www.north-norfolk.gov.uk/media/3783/northnorfolk_brownfieldreg
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-NNO
+suffix: .txt
 ---
 
 Brownfield sites

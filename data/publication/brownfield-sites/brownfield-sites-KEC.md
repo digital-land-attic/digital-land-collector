@@ -8,6 +8,7 @@ data-url: https://www.rbkc.gov.uk/sites/default/files/atoms/files/17-12-15%20RBK
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-KEC
+suffix: .txt
 ---
 
 Brownfield sites

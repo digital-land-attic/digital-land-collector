@@ -8,6 +8,7 @@ data-url: http://www.maidstone.gov.uk/__data/assets/file/0009/163476/Brownfield-
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-MAI
+suffix: .txt
 ---
 
 Brownfield sites
