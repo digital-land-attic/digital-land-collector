@@ -6,7 +6,7 @@ copyright: crown-copyright
 licence: ogl
 data-url: https://www.southdowns.gov.uk/wp-content/uploads/2017/12/Brownfield-Register-Dec-2017.pdf
 data-gov-uk: 
-task: csv
+task: _csv
 prefix: brownfield-site-np10
 ---
 

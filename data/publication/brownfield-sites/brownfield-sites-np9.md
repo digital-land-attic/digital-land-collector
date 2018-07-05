@@ -8,6 +8,7 @@ data-url: http://www.newforestnpa.gov.uk/app/uploads/2018/01/npark_E26000009_bro
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-np9
+suffix: .txt
 ---
 
 Brownfield sites

@@ -8,6 +8,7 @@ data-url: http://www.exmoor-nationalpark.gov.uk/__data/assets/file/0009/1069317/
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-np6
+suffix: .txt
 ---
 
 Brownfield sites
