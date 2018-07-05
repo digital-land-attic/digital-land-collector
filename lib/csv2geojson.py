@@ -24,9 +24,11 @@ wgs84 = pyproj.Proj(init='epsg:4326')
 
 
 def geometry(row):
+    geox = row['GeoX'].strip().split()[0]
+    geoy = row['GeoY'].strip().split()[0]
     try:
-        lon = float(row['GeoX'])
-        lat = float(row['GeoY'])
+        lon = float(geox)
+        lat = float(geoy)
         if lon > 10000:
             # sniffed bng coordinate system
             lon, lat = pyproj.transform(bng, wgs84, lon, lat)
