@@ -8,6 +8,7 @@ data-url: https://www.rutland.gov.uk/_resources/assets/attachment/full/0/55748.x
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-RUT
+suffix: .xlsm
 ---
 
 Brownfield sites

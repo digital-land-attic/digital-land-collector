@@ -8,6 +8,7 @@ data-url: http://www.reading.gov.uk/media/8111/Brownfield-Land-Register/xls/2017
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-RDG
+suffix: .xlsx
 ---
 
 Brownfield sites

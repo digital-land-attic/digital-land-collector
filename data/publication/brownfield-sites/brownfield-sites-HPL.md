@@ -6,7 +6,7 @@ copyright: crown-copyright
 licence: ogl
 data-url: https://www.hartlepool.gov.uk/download/downloads/id/3889/brownfield_land_register_-_part_1.xlsm
 data-gov-uk: 
-task: _csv_xlsm
+task: csv
 prefix: brownfield-site-HPL
 suffix: .xlsm
 ---

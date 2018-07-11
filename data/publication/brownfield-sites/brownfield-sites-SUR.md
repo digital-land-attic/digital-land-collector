@@ -8,6 +8,7 @@ data-url: http://www.surreyheath.gov.uk/sites/default/files/documents/residents/
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-SUR
+suffix: .txt
 ---
 
 Brownfield sites

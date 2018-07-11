@@ -6,7 +6,7 @@ copyright: crown-copyright
 licence: ogl
 data-url: http://www.newark-sherwooddc.gov.uk/media/newarkandsherwood/imagesandfiles/planningpolicy/pdfs/brownfieldlandregister/NewarkandSherwood_2017-12-20_rev3.xlsm
 data-gov-uk: 
-task: _csv_xlsm
+task: csv
 prefix: brownfield-site-NEA
 suffix: .xlsm
 ---

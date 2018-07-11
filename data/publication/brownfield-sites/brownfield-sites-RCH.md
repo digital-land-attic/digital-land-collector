@@ -8,6 +8,7 @@ data-url: http://www.rochdale.gov.uk/docs/2017-12-14-brownfield-land-register-as
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-RCH
+suffix: .txt
 ---
 
 Brownfield sites

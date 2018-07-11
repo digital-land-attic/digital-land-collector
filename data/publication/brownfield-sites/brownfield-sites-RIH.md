@@ -8,6 +8,7 @@ data-url: https://www.richmondshire.gov.uk/media/8380/brownfield-land-register-p
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-RIH
+suffix: .txt
 ---
 
 Brownfield sites

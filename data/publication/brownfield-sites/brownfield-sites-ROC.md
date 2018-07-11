@@ -8,6 +8,7 @@ data-url: https://www.rochford.gov.uk/brownfield-register-2018-excel-file
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-ROC
+suffix: .xlsx
 ---
 
 Brownfield sites

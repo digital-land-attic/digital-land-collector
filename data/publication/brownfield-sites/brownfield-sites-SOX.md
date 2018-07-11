@@ -8,6 +8,7 @@ data-url: http://www.southoxon.gov.uk/sites/default/files/2017.11.17_SODC_Brownf
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-SOX
+suffix: .xlsm
 ---
 
 Brownfield sites

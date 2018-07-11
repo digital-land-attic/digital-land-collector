@@ -8,6 +8,7 @@ data-url: https://www.sevenoaks.gov.uk/download/downloads/id/1042/brownfield_lan
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-SEV
+suffix: .xlsx
 ---
 
 Brownfield sites

@@ -4,7 +4,8 @@ name: Brownfield Sites
 organisation: local-authority-eng:TON
 copyright: crown-copyright
 licence: ogl
-data-url: https://www.tmbc.gov.uk/__data/assets/text_file/0007/476035/TMBC_Brownfield_Register.csv
+documentation-url: https://www.tmbc.gov.uk/services/planning-and-development/planning/planning-local-plans/brownfield-register
+data-url: https://www.tmbc.gov.uk/__data/assets/text_file/0007/476035/BFR-April-2018.csv
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-TON

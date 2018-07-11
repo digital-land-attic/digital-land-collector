@@ -6,8 +6,9 @@ copyright: crown-copyright
 licence: ogl
 data-url: http://www.coventry.gov.uk/download/downloads/id/27273/brownfield_land_register.xlsm
 data-gov-uk: 
-task: _csv
+task: csv
 prefix: brownfield-site-COV
+suffix: .xlsm
 ---
 
 Brownfield sites

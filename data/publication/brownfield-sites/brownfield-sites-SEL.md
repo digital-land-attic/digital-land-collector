@@ -8,6 +8,7 @@ data-url: http://www.selby.gov.uk/sites/default/files/Selby_Brownfield_Register_
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-SEL
+suffix: .xlsx
 ---
 
 Brownfield sites

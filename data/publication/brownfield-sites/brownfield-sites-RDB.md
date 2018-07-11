@@ -6,7 +6,7 @@ copyright: crown-copyright
 licence: ogl
 data-url: http://data.redbridge.gov.uk/View/planning-and-land/brownfield-land-register#
 data-gov-uk: 
-task: csv
+task: _csv
 prefix: brownfield-site-RDB
 ---
 

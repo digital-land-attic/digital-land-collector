@@ -6,8 +6,9 @@ copyright: crown-copyright
 licence: ogl
 data-url: http://www.brentwood.gov.uk/pdf/29122017084910000000.xlsm
 data-gov-uk: 
-task: _csv
+task: csv
 prefix: brownfield-site-BRW
+suffix: .xlsm
 ---
 
 Brownfield sites

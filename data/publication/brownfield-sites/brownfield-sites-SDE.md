@@ -8,6 +8,7 @@ data-url: http://www.south-derbys.gov.uk/assets/attach/3720/South-Derbyshire_bro
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-SDE
+suffix: .txt
 ---
 
 Brownfield sites

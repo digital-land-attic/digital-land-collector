@@ -8,6 +8,7 @@ data-url: http://www.slough.gov.uk/downloads/slough_brownfield_land_register_01-
 data-gov-uk: 
 task: csv
 prefix: brownfield-site-SLG
+suffix: .txt
 ---
 
 Brownfield sites

@@ -4,9 +4,10 @@ name: Brownfield Sites
 organisation: local-authority-eng:STN
 copyright: crown-copyright
 licence: ogl
-data-url: https://drive.google.com/drive/folders/0Bww0pBhg-RKJUDRkWVZNNjVPREE
+documentation-url: 
+data-url: 
 data-gov-uk: 
-task: csv
+task: _csv_not_published
 prefix: brownfield-site-STN
 ---
 

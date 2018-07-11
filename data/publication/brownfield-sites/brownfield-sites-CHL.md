@@ -6,7 +6,7 @@ copyright: crown-copyright
 licence: ogl
 data-url: https://www.chelmsford.gov.uk/EasySiteWeb/GatewayLink.aspx?alId=1095043
 data-gov-uk: 
-task: _csv
+task: csv
 prefix: brownfield-site-CHL
 suffix: .xlsm
 ---
