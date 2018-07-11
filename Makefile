@@ -72,6 +72,10 @@ var/csv/%.csv: var/cache/%.xlsx
 	@mkdir -p var/csv/
 	in2csv $< > $@
 
+var/csv/%.csv: var/cache/%.xlsm
+	@mkdir -p var/csv/
+	xlsx2csv $< > $@
+
 #
 #  rebuild publication index
 #
