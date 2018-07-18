@@ -27,9 +27,11 @@ makefiles/publications.mk:	$(INDEXES) $(PUBLICATIONS) data/publication/index.tsv
 TARGETS=\
 	data/organisation.tsv \
 	data/publication/index.tsv \
+	etc/brownfield-site-publication.tsv\
 	$(FEATURES)
 
 ETC=\
+	etc/brownfield-site-publication.tsv\
 	etc/development-corporation.tsv\
 	etc/company.tsv\
 	etc/national-park.tsv
@@ -81,6 +83,13 @@ var/csv/%.csv: var/cache/%.xlsm
 #
 data/publication/index.tsv:
 	bin/index.sh data/publication > $@
+
+
+#
+#  list of brownfield site publications
+#
+etc/brownfield-site-publication.tsv:	$(PUBLICATIONS)
+	python3 lib/brownfield-site-publication.py > $@
 
 #
 #  phony
