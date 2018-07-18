@@ -4,9 +4,10 @@ name: Brownfield Sites
 organisation: local-authority-eng:TRF
 copyright: crown-copyright
 licence: ogl
-data-url: https://mappinggm.org.uk/docs/brownfield/trafford_brownfieldregister_2017-12-22_rev1.csv
+documentation-url: https://www.trafford.gov.uk/planning/strategic-planning/local-plan/brownfield-land-register.aspx
+data-url: https://www.trafford.gov.uk/planning/strategic-planning/docs/brownfieldregister-2017-12-22-rev1.csv
 data-gov-uk: 
-task: csv
+task: _csv_404
 prefix: brownfield-site-TRF
 ---
 
