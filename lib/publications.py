@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
         if path.endswith('.md'):
             item = frontmatter.load(path)
-            if (item['task'] in ['geojson', 'gml', 'kml', 'shape-zip']):
+            if (item['task'] in ['geojson', 'gml', 'kml', 'shape-zip', 'csv']):
 
                 if item['task'] == 'shape-zip':
                     suffix = '.zip'
@@ -36,6 +36,7 @@ if __name__ == "__main__":
                 item['cache'] = item.get('cache', os.path.join('var/cache/', publication + item['suffix']))
                 item['geojson'] = item.get('geojson', os.path.join('var/geojson', publication + '.geojson'))
                 item['feature'] = item.get('feature', os.path.join('data/feature', publication + '.geojson'))
+                item['csv'] = item.get('csv', os.path.join('var/csv/', publication + '.csv'))
 
                 items.append(item.metadata)
 
@@ -61,7 +62,13 @@ if __name__ == "__main__":
 \tpython3 lib/geojson.py '{publication}' '{prefix}' '{key}' < {geojson} > $@
 """.format(**item))
 
-        if item['task'] == 'shape-zip':
+        if item['task'] == 'csv':
+            print("""
+{geojson}:\t{csv} lib/csv2geojson.py
+\t@mkdir -p var/geojson
+\tpython3 lib/csv2geojson.py < {csv} > $@
+""".format(**item))
+        elif item['task'] == 'shape-zip':
             print("""
 {geojson}:\t{cache}
 \t@mkdir -p var/geojson

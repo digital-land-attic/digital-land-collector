@@ -10,12 +10,10 @@ import sys
 
 try:
     import ijson.backends.yajl2_cffi as ijson
-    input = sys.stdin.buffer
+    stdin = sys.stdin.buffer
 except ImportError:
     import ijson
-    input = sys.stdin
-
-output = sys.stdout
+    stdin = sys.stdin
 
 import json
 import os
@@ -89,27 +87,23 @@ def dumps(obj):
     return json.dumps(obj, default=decimal_default, separators=(',', ':'), sort_keys=True)
 
 
-def c14n(publication, prefix, key, ifp=input, ofp=output):
-    print('{ "type": "FeatureCollection", "features": [', file=ofp, end="")
+def c14n(items, publication=None, prefix=None, key=None, file=sys.stdout):
+    print('{ "type": "FeatureCollection", "features": [', file=file, end="")
+    sep = ""
 
-    features = ijson.items(ifp, 'features.item')
-    try:
-        while True:
-            f = next(features)
-            if 'geometry' in f and f['geometry']:
-                item = hashlib.md5(dumps(f).encode('utf-8')).hexdigest()
-                print(dumps(feature(f, item, publication, prefix, key)), file=ofp, end="")
-                print(',', end="")
-    except StopIteration:
-        try:
-            if 'geometry' in f and f['geometry']:
-                item = hashlib.md5(dumps(f).encode('utf-8')).hexdigest()
-                print(dumps(feature(f, item, publication, prefix, key)), file=ofp, end="")
-        except UnboundLocalError:
-            pass
+    for f in items:
+        if 'geometry' in f and f['geometry']:
+            item = hashlib.md5(dumps(f).encode('utf-8')).hexdigest()
+            print(sep)
+            print(dumps(feature(f, item, publication, prefix, key)), file=file, end="")
+            sep = ","
 
-    print(']}', file=ofp, end="")
+    print(']}', file=file, end="")
 
 
 if __name__ == "__main__":
-    c14n(publication=sys.argv[1], prefix=sys.argv[2], key=sys.argv[3])
+    c14n(
+        ijson.items(stdin, 'features.item'),
+        publication=sys.argv[1],
+        prefix=sys.argv[2],
+        key=sys.argv[3])

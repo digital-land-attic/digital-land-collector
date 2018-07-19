@@ -9,12 +9,15 @@ all: makefiles etc publications targets
 #
 #  make dependencies
 #
+INDEXES=\
+	data/publication/index.tsv
+
 MAKEFILES=\
 	makefiles/publications.mk
 
 -include makefiles/publications.mk
 
-makefiles/publications.mk:	$(PUBLICATIONS) data/publication/index.tsv lib/publications.py
+makefiles/publications.mk:	$(INDEXES) $(PUBLICATIONS) data/publication/index.tsv lib/publications.py
 	@mkdir -p makefiles
 	python3 lib/publications.py < data/publication/index.tsv > $@
 
@@ -24,9 +27,11 @@ makefiles/publications.mk:	$(PUBLICATIONS) data/publication/index.tsv lib/public
 TARGETS=\
 	data/organisation.tsv \
 	data/publication/index.tsv \
+	etc/brownfield-site-publication.tsv\
 	$(FEATURES)
 
 ETC=\
+	etc/brownfield-site-publication.tsv\
 	etc/development-corporation.tsv\
 	etc/company.tsv\
 	etc/national-park.tsv
@@ -51,15 +56,46 @@ var/geojson/%.geojson: var/cache/%.kml
 	ogr2ogr -f geojson -t_srs EPSG:4326 $@ $<
 
 #
+#  convert spreadsheets to CSV
+#
+var/csv/%.csv: var/cache/%.txt
+	@mkdir -p var/csv/
+	iconv -f ISO8859-1 -t UTF-8 $< > $@
+
+var/csv/%.csv: var/cache/%.csv
+	@mkdir -p var/csv/
+	in2csv $< > $@
+
+var/csv/%.csv: var/cache/%.xls
+	@mkdir -p var/csv/
+	in2csv $< > $@
+
+var/csv/%.csv: var/cache/%.xlsx
+	@mkdir -p var/csv/
+	in2csv $< > $@
+
+var/csv/%.csv: var/cache/%.xlsm
+	@mkdir -p var/csv/
+	xlsx2csv $< > $@
+
+#
 #  rebuild publication index
 #
 data/publication/index.tsv:
 	bin/index.sh data/publication > $@
 
+
+#
+#  list of brownfield site publications
+#
+etc/brownfield-site-publication.tsv:	$(PUBLICATIONS)
+	python3 lib/brownfield-site-publication.py > $@
+
 #
 #  phony
 #
 makefiles:: $(MAKEFILES)
+indexes:: $(INDEXES)
 publications::	$(PUBLICATIONS)
 targets::	$(TARGETS)
 etc::	$(ETC)
@@ -71,7 +107,7 @@ clobber::
 	rm -f $(TARGETS)
 
 clean::
-	rm -f $(MAKEFILES)
+	rm -f $(MAKEFILES) $(INDEXES)
 
 prune::	clean clobber
 	rm -rf var
