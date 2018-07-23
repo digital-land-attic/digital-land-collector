@@ -6,7 +6,7 @@ copyright: crown-copyright
 licence: ogl
 data-url: https://www.broxbourne.gov.uk/sites/default/files/Documents/Planning/pp_Brownfield_Register_15_12_17.xlsx
 data-gov-uk: 
-task: _csv
+task: csv
 prefix: brownfield-site-BRX
 suffix: .xlsx
 ---
