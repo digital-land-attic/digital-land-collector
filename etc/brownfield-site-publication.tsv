@@ -43,7 +43,7 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 42	local-authority-eng:CAB		https://www.cambridge.gov.uk/sites/default/files/brownfield-land-register.csv			
 43	local-authority-eng:CAN		https://www.cannockchasedc.gov.uk/sites/default/files/cannockchase_brownfieldregister_2017-12-01_rev1.csv			
 44	local-authority-eng:CAR	http://www.carlisle.gov.uk/planning-policy/Evidence-Base/Brownfield-Register	https://s3.eu-west-2.amazonaws.com/digital-land/brownfield-sites/CAR-2017-07-23.csv			
-45	local-authority-eng:CAS		https://www.castlepoint.gov.uk/download.cfm?doc=docm93jijm4n3267.csv&ver=5318			
+45	local-authority-eng:CAS	https://www.castlepoint.gov.uk/brownfield-land-register	https://s3.eu-west-2.amazonaws.com/digital-land/brownfield-sites/castlepoint_brownfieldregister_2017-12-01_rev1.csv			
 46	local-authority-eng:CAT		https://www2.canterbury.gov.uk/media/1544546/Canterbury-brownfield-register-2017.csv			
 47	local-authority-eng:CBF		http://www.centralbedfordshire.gov.uk/Images/brownfield-register-jan-2018_tcm3-26973.csv			
 48	local-authority-eng:CHA		https://www.charnwood.gov.uk/files/documents/2017_charnwood_brownfield_land_register_cvs_file/charnwood_brownfieldregister_2017-12-31_rev2.csv			

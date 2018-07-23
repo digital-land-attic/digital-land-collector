@@ -4,9 +4,10 @@ name: Brownfield Sites
 organisation: local-authority-eng:CAS
 copyright: crown-copyright
 licence: ogl
-data-url: https://www.castlepoint.gov.uk/download.cfm?doc=docm93jijm4n3267.csv&ver=5318
+documentation-url: https://www.castlepoint.gov.uk/brownfield-land-register
+data-url: https://s3.eu-west-2.amazonaws.com/digital-land/brownfield-sites/castlepoint_brownfieldregister_2017-12-01_rev1.csv
 data-gov-uk: 
-task: _csv
+task: csv
 prefix: brownfield-site-CAS
 ---
 
