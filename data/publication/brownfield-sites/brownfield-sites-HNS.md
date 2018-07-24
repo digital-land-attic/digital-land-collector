@@ -4,9 +4,10 @@ name: Brownfield Sites
 organisation: local-authority-eng:HNS
 copyright: crown-copyright
 licence: ogl
-data-url: http://data.hounslow.gov.uk/Download/planning/brownfield-land/hounslow-brownfield-land-register-2017-12-31/CSV?version=22/12/2017
+documentation-url: http://data.hounslow.gov.uk/Download/planning/brownfield-land
+data-url: http://data.hounslow.gov.uk/download/planning/brownfield-land/brownfield-register-2017-12-22/CSV?version=16/07/2018
 data-gov-uk: 1d30c576-a0f1-422c-adcd-be757fade46b
-task: _csv_404
+task: csv
 prefix: brownfield-site-HNS
 ---
 
