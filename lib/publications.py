@@ -63,6 +63,13 @@ if __name__ == "__main__":
 """.format(**item))
 
         if item['task'] == 'csv':
+            if 'skip-lines' in item:
+                print("""
+{csv}:\t{cache}
+\t@mkdir -p var/csv
+\tin2csv $< | tail -n +{skip-lines} > $@
+""".format(**item))
+
             print("""
 {geojson}:\t{csv} lib/csv2geojson.py
 \t@mkdir -p var/geojson

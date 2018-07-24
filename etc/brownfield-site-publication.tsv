@@ -47,7 +47,7 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 46	local-authority-eng:CAT		https://www2.canterbury.gov.uk/media/1544546/Canterbury-brownfield-register-2017.csv			
 47	local-authority-eng:CBF		http://www.centralbedfordshire.gov.uk/Images/brownfield-register-jan-2018_tcm3-26973.csv			
 48	local-authority-eng:CHA		https://www.charnwood.gov.uk/files/documents/2017_charnwood_brownfield_land_register_cvs_file/charnwood_brownfieldregister_2017-12-31_rev2.csv			
-49	local-authority-eng:CHC	https://www.dorsetforyou.gov.uk/planning-buildings-land/planning-policy/east-dorset-planning-policy/local-development-framework/christchurch-and-east-dorset-brownfield-land-registers.aspx	https://www.dorsetforyou.gov.uk/planning-buildings-land/planning-policy/east-dorset-planning-policy/local-development-framework/pdfs/brownfield-land-registers/christchurch-brownfield-register-2017.12.19-rev1-excel.csv			
+49	local-authority-eng:CHC	https://www.dorsetforyou.gov.uk/planning-buildings-land/planning-policy/east-dorset-planning-policy/local-development-framework/christchurch-and-east-dorset-brownfield-land-registers.aspx	https://www.dorsetforyou.gov.uk/planning-buildings-land/planning-policy/east-dorset-planning-policy/local-development-framework/pdfs/brownfield-land-registers/christchurch-brownfield-register-2017.12.19-rev1-excel.csv	d8a32f35-e59f-4624-bb3d-2b733c78e276		
 50	local-authority-eng:CHE		http://www.cheshireeast.gov.uk/docs/planning/spatial-planning-ldo-pages/brownfield-register/cheshireeast-brownfieldregister-2017-12-31-rev1.csv			
 51	local-authority-eng:CHI		http://www.chichester.gov.uk/CHttpHandler.ashx?id=29276&p=0			
 52	local-authority-eng:CHL		https://www.chelmsford.gov.uk/EasySiteWeb/GatewayLink.aspx?alId=1095043			
@@ -65,7 +65,7 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 64	local-authority-eng:COR		http://www.nnjpu.org.uk/docs/BrownfieldLandRegisterTemplate%20-%202017%20Update%20-%20ONLINE%20VERSION.xlsm			
 65	local-authority-eng:COT		http://www.cotswold.gov.uk/media/1565830/Brownfield-Land-Register.csv			
 66	local-authority-eng:COV		http://www.coventry.gov.uk/download/downloads/id/27273/brownfield_land_register.xlsm			
-67	local-authority-eng:CRA		https://www.cravendc.gov.uk/media/5414/brownfield-land-register-020218.xlsx			
+67	local-authority-eng:CRA	https://www.cravendc.gov.uk/planning/brownfield-land-register/	https://www.cravendc.gov.uk/media/5414/brownfield-land-register-020218.xlsx			
 68	local-authority-eng:CRW		http://www.crawley.gov.uk/pw/native/PUB327228			
 69	local-authority-eng:CRY		https://www.croydon.gov.uk/sites/default/files/articles/downloads/Croydon%20Brownfield%20Land%20Register.xlsx			
 70	local-authority-eng:DAC		https://www.dacorum.gov.uk/docs/default-source/default-document-library/dbc---brownfield-land-register-2017---csv-data-gov-version.csv?sfvrsn=0			
