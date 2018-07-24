@@ -59,7 +59,7 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 58	local-authority-eng:CHW		http://consult.cheshirewestandchester.gov.uk/file/4828366			
 59	local-authority-eng:CLD		https://files.datapress.com/calderdale/dataset/brownfield-land-register/2017-12-21T10:30:42.92/brownfield-register.csv			
 60	local-authority-eng:CMD		https://opendata.camden.gov.uk/api/views/dc7i-3xh8/rows.csv?accessType=DOWNLOAD			
-61	local-authority-eng:COL	http://datashare.colchester.gov.uk/View/planning-and-licensing/brownfield-land-register#	http://datashare.colchester.gov.uk/View/planning-and-licensing/brownfield-land-register#			
+61	local-authority-eng:COL	http://datashare.colchester.gov.uk/View/planning-and-licensing/brownfield-land-register	https://s3.eu-west-2.amazonaws.com/digital-land/brownfield-sites/COL-2017-07-23.csv			
 62	local-authority-eng:CON		http://www.cornwall.gov.uk/media/30358128/cornwallcouncil_brownfieldregister_2017-12-12_rev1.csv			
 63	local-authority-eng:COP		https://www.copeland.gov.uk/sites/default/files/attachments/copeland_brownfield_register.csv			
 64	local-authority-eng:COR		http://www.nnjpu.org.uk/docs/BrownfieldLandRegisterTemplate%20-%202017%20Update%20-%20ONLINE%20VERSION.xlsm			
