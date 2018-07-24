@@ -101,9 +101,9 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 100	local-authority-eng:FEN		http://www.fenland.gov.uk/CHttpHandler.ashx?id=14426&p=0			
 101	local-authority-eng:FOE		http://www.fdean.gov.uk/media/5465/dclg-brownfield-land-register.csv			
 102	local-authority-eng:FOR		https://www.westsuffolk.gov.uk/planning/Planning_Policies/upload/2017-12-13-Brownfield-land-register-csv-2.csv			
-103	local-authority-eng:FYL					
+103	local-authority-eng:FYL	http://www.fylde.gov.uk/council/planning-policy--local-plan-/local-development-framework/brownfield-register/				
 104	local-authority-eng:GAT	https://www.gateshead.gov.uk/article/3017/Brownfield-Register-December-2017	https://www.gateshead.gov.uk/media/6902/Gateshead-brownfield-register/excel/gateshead-brownfieldregister-2017-12-21-rev1.csv.csv			
-105	local-authority-eng:GED		http://data-gedlingbc.opendata.arcgis.com/datasets/f326d33c9af24ee99ebc325825b7f60b_0.csv			
+105	local-authority-eng:GED	https://www.gedling.gov.uk/shlaa/	https://www.gedling.gov.uk/media/gedlingboroughcouncil/documents/planningpolicy/brownfieldregister/gedling_brownfieldregister_2017-08-31_rev1.csv			
 106	local-authority-eng:GLA	https://data.london.gov.uk/dataset/brownfield-land-register	https://data.london.gov.uk/dataset/brownfield-land-register	de1d9987-0d31-474c-a3a5-18a33885153c		
 107	local-authority-eng:GLO		http://www.gloucester.gov.uk/Documents/GloucesterBFLR.csv			
 108	local-authority-eng:GOS		http://www.gosport.gov.uk/files/GBCBrownfieldLandRegister.csv			

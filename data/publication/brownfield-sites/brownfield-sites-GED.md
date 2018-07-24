@@ -4,9 +4,10 @@ name: Brownfield Sites
 organisation: local-authority-eng:GED
 copyright: crown-copyright
 licence: ogl
-data-url: http://data-gedlingbc.opendata.arcgis.com/datasets/f326d33c9af24ee99ebc325825b7f60b_0.csv
-data-gov-uk: 
-task: _csv_crs_in_values
+documentation-url: https://www.gedling.gov.uk/shlaa/
+data-url: https://www.gedling.gov.uk/media/gedlingboroughcouncil/documents/planningpolicy/brownfieldregister/gedling_brownfieldregister_2017-08-31_rev1.csv
+data-gov-uk: 1d30c576-a0f1-422c-adcd-be757fade46b
+task: csv
 prefix: brownfield-site-GED
 ---
 
