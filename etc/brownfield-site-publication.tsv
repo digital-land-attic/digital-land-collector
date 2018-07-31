@@ -128,7 +128,7 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 127	local-authority-eng:HIN		https://www.hinckley-bosworth.gov.uk/download/downloads/id/5936/brownfield_register_2017.csv			
 128	local-authority-eng:HMF		http://files.datapress.com/london/dataset/brownfield-land-register/2017-12-21T14:21:59.58/London_Brownfield_Land_Register_20171221_.csv			
 129	local-authority-eng:HNS	http://data.hounslow.gov.uk/Download/planning/brownfield-land	http://data.hounslow.gov.uk/download/planning/brownfield-land/brownfield-register-2017-12-22/CSV?version=16/07/2018	1d30c576-a0f1-422c-adcd-be757fade46b		
-130	local-authority-eng:HOR	https://www.horsham.gov.uk/planningpolicy/planning-policy/housing-land-availability/brownfield-land-register	https://www.horsham.gov.uk/__data/assets/text_file/0007/49435/horsham_brownfieldregister_2017-12-31_rev1a.txt			
+130	local-authority-eng:HOR	https://www.horsham.gov.uk/planningpolicy/planning-policy/housing-land-availability/brownfield-land-register	https://www.horsham.gov.uk/__data/assets/excel_doc/0006/49434/horsham_brownfieldregister_2017-12-31_rev1a.xlsx			
 131	local-authority-eng:HPL		https://www.hartlepool.gov.uk/download/downloads/id/3889/brownfield_land_register_-_part_1.xlsm			
 132	local-authority-eng:HRW		http://www.harrow.gov.uk/download/downloads/id/10631/harrow_s_brownfield_land_register			
 133	local-authority-eng:HRY		http://www.haringey.gov.uk/sites/haringeygovuk/files/haringey_brownfield_register_final_dec_2017.csv			
@@ -145,14 +145,14 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 144	local-authority-eng:KIR		http://www.kirklees.gov.uk/beta/planning-policy/pdf/brownfield-land-register-2017.csv			
 145	local-authority-eng:KTT		https://www.kingston.gov.uk/download/downloads/id/2204/kingston_brownfield_register_-_december_2017.csv			
 146	local-authority-eng:KWL		http://www.knowsley.gov.uk/knowsleycouncil/media/Documents/Knowsley-MBC-Brownfield-register.xlsx			
-147	local-authority-eng:LAC					
+147	local-authority-eng:LAC	https://www.lancaster.gov.uk/planning/planning-policy/brownfield-register	https://www.lancaster.gov.uk/assets/attach/3838/lancastercitycouncil_brownfieldlandregister_2018-06-21_rev1.csv	b471616a-b20b-40f3-8608-5567674a49ee		
 148	local-authority-eng:LBH		https://www.lambeth.gov.uk/sites/default/files/lambeth_brownfieldregister_2017-12-15_rev1.csv			
 149	local-authority-eng:LCE		http://directory.leicester.gov.uk/media/9719/leicester_brownfieldregister_2017-12-31_rev1.csv			
 150	local-authority-eng:LDS	https://datamillnorth.org/dataset/brownfield-land-register	https://files.datapress.com/leeds/dataset/brownfield-land-register/2018-01-16T09:02:07.54/Brownfield.csv			
 151	local-authority-eng:LEE		http://www.lewes-eastbourne.gov.uk/_resources/assets/inline/full/0/263293.csv			
 152	local-authority-eng:LEW		https://www.lewisham.gov.uk/myservices/planning/policy/Documents/BrownfieldLandRegister.csv	292889d5-fc9d-4d4b-a1ba-74b60e9d00ef		
 153	local-authority-eng:LIC		https://www.lincoln.gov.uk/_resources/assets/attachment/full/0/54502.csv			
-154	local-authority-eng:LIF		https://www.lichfielddc.gov.uk/Inspire-data-sets/Lichfield%20District%20Council%20Brownfield%20Land%20Register/Brownfield%20Land%20Register%202017.xlsm			
+154	local-authority-eng:LIF	https://www.lichfielddc.gov.uk/Council/Planning/The-local-plan-and-planning-policy/Resource-centre/Evidence-base/Housing/Brownfield-land-register.aspx	https://www.lichfielddc.gov.uk/Inspire-data-sets/Lichfield%20District%20Council%20Brownfield%20Land%20Register/Brownfield%20Land%20Register%202017.csv	e8e39e60-6422-4ac3-a206-e474ca4586b6		
 155	local-authority-eng:LIV		https://liverpool.gov.uk/media/1356598/blr-lpool-part1-schedule-mandatorycols-12-12-17.csv			
 156	local-authority-eng:LND		http://www.cityoflondon.gov.uk/services/environment-and-planning/planning/development-and-population-information/Documents/city-of-london_brownfieldregister_2017-11-16_rev0.csv			
 157	local-authority-eng:LUT		http://www.luton.gov.uk/Environment/Lists/LutonDocuments/Excel/HOU-014.csv			
@@ -190,10 +190,10 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 189	local-authority-eng:NSM		http://www.n-somerset.gov.uk/wp-content/uploads/2015/11/northsomerset_brownfieldregister_2017-12-31_rev1.csv			
 190	local-authority-eng:NTY		http://my.northtyneside.gov.uk/sites/default/files/web-page-related-files/northtyneside_brownfieldregister_2017-12-31_rev1.csv			
 191	local-authority-eng:NUN	https://www.nuneatonandbedworth.gov.uk/downloads/file/2209/nuneaton_and_bedworth_brownfield_register_-_csv_2017	https://www.nuneatonandbedworth.gov.uk/download/downloads/id/2209/nuneaton_and_bedworth_brownfield_register_-_csv_2017.csv			
-192	local-authority-eng:NWA					
+192	local-authority-eng:NWA	https://www.northwarks.gov.uk/info/20002/planning/1082/what_is_the_local_plan_for_north_warwickshire/7				
 193	local-authority-eng:NWL		https://www.nwleics.gov.uk/files/documents/brownfield_land_register1/northwestleicestershire_brownfieldregister_2017-12-31_rev1.csv			
 194	local-authority-eng:NWM		https://www.newham.gov.uk/Documents/Environment%20and%20planning/Newham%20Brownfield%20Register.csv			
-195	local-authority-eng:OAD					
+195	local-authority-eng:OAD	https://www.oadby-wigston.gov.uk/pages/brownfield_land_register	https://www.oadby-wigston.gov.uk/files/documents/brownfield_land_register_part_1_december_2017_update/Government%20Template%202016.2017%20%28complete%29.xlsm			
 196	local-authority-eng:OLD	https://www.oldham.gov.uk/info/200585/local_plan/2043/brownfield_land_register/1	https://www.oldham.gov.uk/downloads/file/4805/oldham_brownfieldregister_2017_12_22_1			
 197	local-authority-eng:OXO		https://www.oxford.gov.uk/download/downloads/id/4244/oxford_brownfield_register_-_december_2017_csv.csv			
 198	local-authority-eng:PEN		https://www.pendle.gov.uk/download/downloads/id/10040/pendle_brownfield_register_csv.csv			
@@ -202,10 +202,10 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 201	local-authority-eng:POR		https://www.portsmouth.gov.uk/ext/documents-external/portsmouth-brownfieldregister-2017-12-15-rev1.0.csv			
 202	local-authority-eng:PRE		http://www.preston.gov.uk/GetAsset.aspx?id=fAAyADUANAA5ADYAfAB8AFQAcgB1AGUAfAB8ADAAfAA1			
 203	local-authority-eng:PTE	https://www.peterborough.gov.uk/council/planning-and-development/planning-policies/brownfield-site-register/	https://docs.google.com/spreadsheets/d/19I7Oh4cF3b4qtVJPhltbrtQ2X1J79hfMG6F_k4Ir88o/export?format=csv&id=19I7Oh4cF3b4qtVJPhltbrtQ2X1J79hfMG6F_k4Ir88o&gid=666617093			
-204	local-authority-eng:PUR		https://www.dorsetforyou.gov.uk/media/224194/purbeck-brownfield-land-register-2017/doc/purbeck-brownfield-land-register-2017-12-31-protected.csv	5bd47719-8169-4150-8911-fda6ad904911		
+204	local-authority-eng:PUR	https://www.dorsetforyou.gov.uk/planning-buildings-land/planning-policy/purbeck-planning-policy/brownfield-register-purbeck/brownfield-land-register.aspx	https://www.dorsetforyou.gov.uk/planning-buildings-land/planning-policy/purbeck-planning-policy/brownfield-register-purbeck/pdf/purbeck-brownfield-land-register-part-1.csv	5bd47719-8169-4150-8911-fda6ad904911		
 205	local-authority-eng:RCC		http://www.redcar-cleveland.gov.uk/rcbcweb.nsf/E362D0843A70155880257D640049A543/%24FILE/redcarandcleveland_brownfieldregister_2017-11-10_rev1.csv	0a7c1a46-51c6-4747-af50-b29cbd17a888		
 206	local-authority-eng:RCH		http://www.rochdale.gov.uk/docs/2017-12-14-brownfield-land-register-as-at-01-04-2017-v1.csv			
-207	local-authority-eng:RDB		http://data.redbridge.gov.uk/View/planning-and-land/brownfield-land-register#			
+207	local-authority-eng:RDB	http://data.redbridge.gov.uk/View/planning-and-land/brownfield-land-register#	https://s3.eu-west-2.amazonaws.com/digital-land/brownfield-sites/redbridge-brownfield-land-register.csv			
 208	local-authority-eng:RDG		http://www.reading.gov.uk/media/8111/Brownfield-Land-Register/xls/2017_Brownfield_Land_Register_Part_1.xlsx			
 209	local-authority-eng:RED		http://www.redditchbc.gov.uk/media/3411563/Redditch-Brownfield-Land-Register.csv			
 210	local-authority-eng:REI	http://www.reigate-banstead.gov.uk/downloads/download/1346/brownfield_land_register	http://www.reigate-banstead.gov.uk/download/downloads/id/3904/reigateandbanstead_brownfieldregister_2017-12-31_1_csv.csv			
@@ -217,11 +217,11 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 216	local-authority-eng:ROS		https://www.rossendale.gov.uk/download/downloads/id/14159/rossendale_brownfield_land_register_csv_file.csv			
 217	local-authority-eng:ROT		http://www.rotherham.gov.uk/download/downloads/id/3375/brownfield_land_register_2017.csv			
 218	local-authority-eng:RUG		https://www.rugby.gov.uk/download/downloads/id/1475/brownfield_land_register_csv.csv			
-219	local-authority-eng:RUH		http://data.rushmoor.gov.uk/Datasets/ThirdPartyLicensed/Brownfield%20Register/rushmoor_brownfieldregister_2017-12-11_rev1.csv			
+219	local-authority-eng:RUH	https://www.rushmoor.gov.uk/article/10524/Brownfield-land-register	http://data.rushmoor.gov.uk/Datasets/ThirdPartyLicensed/Brownfield%20Register/rushmoor_brownfieldregister_2017-12-11_rev1.csv	b16dade4-2aa7-431e-b282-0128f7b0f5ef		
 220	local-authority-eng:RUN		https://www.runnymede.gov.uk/media/17783/Runnymede-Brownfield-Register/csv/runnymede_brownfieldregister_2018-02-02_rev11.csv			
 221	local-authority-eng:RUS		http://www.rushcliffe.gov.uk/media/1rushcliffe/media/documents/excel/planningandbuilding/planningpolicy/rushcliffe_brownfieldregister_2017_12_19_rev1.csv			
 222	local-authority-eng:RUT		https://www.rutland.gov.uk/_resources/assets/attachment/full/0/55748.xlsm			
-223	local-authority-eng:RYE		https://www.ryedale.gov.uk/attachments/category/1818/ryedale_brownfieldregister_2017-12-22_rev1.csv			
+223	local-authority-eng:RYE	https://www.ryedale.gov.uk/planning/brownfield-land-register.html	https://www.ryedale.gov.uk/attachments/category/1818/ryedale_brownfieldregister_2017-12-22_rev2.csv			
 224	local-authority-eng:SAL		https://www.stalbans.gov.uk/Images/SP_CSV_st-albans_brownfieldregister_2017-12-31_rev1_tcm15-62593.csv			
 225	local-authority-eng:SAW		http://www.sandwell.gov.uk/download/downloads/id/24171/sandwell_brownfield_register_csv.csv			
 226	local-authority-eng:SBU		http://www.southbucks.gov.uk/media/11736/SB-Brownfield-Register-Part-1/CSV/SB_Brownfield_Register_-_Part_1.csv			
@@ -285,7 +285,7 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 284	local-authority-eng:TOB		http://www.torbay.gov.uk/media/10578/torbay_pilotbrownfieldregister_2017-12-31_rev1.csv			
 285	local-authority-eng:TON	https://www.tmbc.gov.uk/services/planning-and-development/planning/planning-local-plans/brownfield-register	https://www.tmbc.gov.uk/__data/assets/text_file/0007/476035/BFR-April-2018.csv			
 286	local-authority-eng:TOR		http://www.torridge.gov.uk/CHttpHandler.ashx?id=18248&p=0			
-287	local-authority-eng:TRF	https://www.trafford.gov.uk/planning/strategic-planning/local-plan/brownfield-land-register.aspx	https://www.trafford.gov.uk/planning/strategic-planning/docs/brownfieldregister-2017-12-22-rev1.csv			
+287	local-authority-eng:TRF	https://www.trafford.gov.uk/planning/strategic-planning/local-plan/brownfield-land-register.aspx	https://s3.eu-west-2.amazonaws.com/digital-land/brownfield-sites/trafford-2017-12-22-rev1.csv			
 288	local-authority-eng:TUN		http://www.tunbridgewells.gov.uk/__data/assets/file/0003/161166/604A2CC63BE467A4E0531401A8C0C3FA_TWBC_Brownfield_Register.csv			
 289	local-authority-eng:TWH		https://www.towerhamlets.gov.uk/Documents/Planning-and-building-control/Strategic-Planning/tower_hamlets_brownfieldregister_2017_11_27_rev1.csv			
 290	local-authority-eng:UTT		https://www.uttlesford.gov.uk/CHttpHandler.ashx?id=7478&p=0			
@@ -309,7 +309,7 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 308	local-authority-eng:WLA		http://www.westlancs.gov.uk/media/543716/blr-2017-final.csv			
 309	local-authority-eng:WLI		https://www.west-lindsey.gov.uk/EasySiteWeb/GatewayLink.aspx?alId=55646			
 310	local-authority-eng:WLL		http://inspire.misoportal.com/csv/files/walsall/walsall_brownfieldregister_2017_12_29_rev1.csv			
-311	local-authority-eng:WLV	http://www.wolverhampton.gov.uk/article/2423/Housing-Site-Information	http://wolverhampton.maps.arcgis.com/apps/webappviewer/index.html?id=2e36e2eff14e40c480194b42b33a0abc	3950724f-f662-45e1-be8e-a53113a9bab7		
+311	local-authority-eng:WLV	http://www.wolverhampton.gov.uk/article/2423/Housing-Site-Information	https://s3.eu-west-2.amazonaws.com/digital-land/brownfield-sites/Wolverhampton+Brownfield+Register+2018.csv	3950724f-f662-45e1-be8e-a53113a9bab7		
 312	local-authority-eng:WND	http://www.wandsworth.gov.uk/info/200237/local_plan_-_evidence_base/2305/brownfield_land_register	http://www.wandsworth.gov.uk/downloads/file/13103/brownfield_land_register_csv			
 313	local-authority-eng:WNM	https://www3.rbwm.gov.uk/info/201039/non-development_plan/1354/registers	https://www3.rbwm.gov.uk/download/downloads/id/3583/brownfield_register.csv			
 314	local-authority-eng:WOC		https://www.worcester.gov.uk/documents/10499/8864076/Worcester+City+Council%27s+Brownfield+Land+Register.csv/ca3998dd-73ea-a77d-38df-abd18c162fe4			
@@ -328,7 +328,7 @@ brownfield-site-publication	organisation	documentation-url	data-url	data-gov-uk	
 327	development-corporation:1		http://www.queenelizabetholympicpark.co.uk/-/media/lldc/planning/brownfield-register/lldc-brownfield-register-csv-web-version.ashx?la=en			
 328	development-corporation:2		https://www.london.gov.uk/sites/default/files/oldoakandparkroyaldevelopmentcorporation_brownfieldregister_2017-12-31_rev1.csv			
 329	national-park:1		http://www.peakdistrict.gov.uk/__data/assets/file/0003/1068042/pdnpa-blr-18_12_2017.csv			
-330	national-park:10		https://www.southdowns.gov.uk/wp-content/uploads/2017/12/Brownfield-Register-Dec-2017.pdf			
+330	national-park:10	https://www.southdowns.gov.uk/planning/national-park-local-plan/strategic-housing-land-availability-assessment-shlaa/brownfield-sites-register/	https://www.southdowns.gov.uk/wp-content/uploads/2017/12/Brownfield-Register-Dec-2017.pdf			
 331	national-park:2		http://www.lakedistrict.gov.uk/planning/planningpolicies/brownfield-land-register2/ldnpa_brownfieldregister_2017-12-14_rev1.csv			
 332	national-park:3		http://www.dartmoor.gov.uk/__data/assets/file/0020/1024445/2017-Brownfield-Register-FINAL.csv			
 333	national-park:4		http://www.northyorkmoors.org.uk/__data/assets/file/0008/1057148/north-york-moors_brownfieldregister_2017-12-14_rev1.csv			
