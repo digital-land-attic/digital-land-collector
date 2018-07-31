@@ -28,7 +28,11 @@ def decimal_default(obj):
 
 
 def coordinates(c):
-    return [round(Decimal(c[0]), 5), round(Decimal(c[1]), 5)]
+    try:
+        return [round(Decimal(c[0]), 5), round(Decimal(c[1]), 5)]
+    except Exception as e:
+        print("invalid coordinates:", c, file=sys.stderr)
+        return [0, 0]
 
 
 def point(g):

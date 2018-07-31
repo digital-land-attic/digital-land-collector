@@ -4,6 +4,7 @@ import sys
 import csv
 import pyproj
 import geojson
+from decimal import Decimal
 
 
 class DictReader(csv.DictReader):
@@ -27,9 +28,9 @@ def geometry(row):
     geox = row['GeoX'].strip().split()[0]
     geoy = row['GeoY'].strip().split()[0]
     try:
-        lon = float(geox)
-        lat = float(geoy)
-        if lon > 10000:
+        lon = Decimal(geox)
+        lat = Decimal(geoy)
+        if lon > 10000.0:
             # sniffed bng coordinate system
             lon, lat = pyproj.transform(bng, wgs84, lon, lat)
         elif lon > 49 and lon < 60 and lat < 0:
@@ -41,7 +42,7 @@ def geometry(row):
 
     return {
         "type": "Point",
-        "coordinates": [lon, lat]
+        "coordinates": [Decimal(lon), Decimal(lat)]
     }
 
 
