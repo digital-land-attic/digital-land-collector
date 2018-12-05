@@ -1,5 +1,5 @@
 developer-agreement-transaction,developer-agreement-contribution,amount,entry-date,start-date,end-date
-developer-agreement-transaction-001,developer-agreement-contribution-005,47250.00,2018-11-15,2018-11-15,
-developer-agreement-transaction-002,developer-agreement-contribution-006,13267.40,2018-11-15,2018-11-15,
-developer-agreement-transaction-003,developer-agreement-contribution-008,45000,2018-11-15,2018-11-15,
-developer-agreement-transaction-003,developer-agreement-contribution-008,-25000,2018-11-18,2018-11-18,
+1,5,47250.00,2018-11-15,2018-11-15,
+2,6,13267.40,2018-11-15,2018-11-15,
+3,8,45000,2018-11-15,2018-11-15,
+3,8,-25000,2018-11-18,2018-11-18,
