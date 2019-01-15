@@ -11,7 +11,7 @@
   ],
   "resources": [
     {
-      "path": "developer-agreement_20181213.csv",
+      "path": "https://raw.githubusercontent.com/communitiesuk/digital-land-collector/master/etc/developer-contributions/local-planning-authority/bab/developer-agreement_20181213.csv",
       "name": "developer-agreement_20181213",
       "profile": "tabular-data-resource",
       "format": "csv",
@@ -97,7 +97,7 @@
       }
     },
     {
-      "path": "developer-agreement-contribution_20181213.csv",
+      "path": "https://raw.githubusercontent.com/communitiesuk/digital-land-collector/master/etc/developer-contributions/local-planning-authority/bab/developer-agreement-contribution_20181213.csv",
       "name": "developer-agreement-contribution_20181213",
       "profile": "tabular-data-resource",
       "format": "csv",
@@ -173,7 +173,7 @@
       }
     },
     {
-      "path": "developer-agreement-transaction_20181213.csv",
+      "path": "https://raw.githubusercontent.com/communitiesuk/digital-land-collector/master/etc/developer-contributions/local-planning-authority/bab/developer-agreement-transaction_20181213.csv",
       "name": "developer-agreement-transaction_20181213",
       "profile": "tabular-data-resource",
       "format": "csv",
