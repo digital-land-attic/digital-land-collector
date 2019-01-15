@@ -21,7 +21,7 @@
                         "format": "default"
                     },
                     {
-                        "name": "orgainisation",
+                        "name": "organisation",
                         "type": "string",
                         "format": "default"
                     },
